@@ -1,38 +1,10 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mariage S+A | Home</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
-    <link href="https://fonts.googleapis.com/css?family=Rochester|Poiret+One|Roboto:400,900" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/main.css'%}">
-  </head>
-  <body>
-    <header>
-      <a href="index.html" id="logo">
-        <h1>Mariage de Sophie & Alexis</h1>
-        <h2>27 mai 2017</h2>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="deroulement.html" class="selected">Déroulement</a></li>
-          <li><a href="hebergement.html">Hébergement</a></li>
-          <li><a href="contact">Questions & Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="wrapper">
-      <section>
-        <img src="{% static 'img/silhouettes_v0.1.jpg' %}" alt="">
-        <h2>Bienvenue!</h2>
-            <h3>N'oubliez pas de répondre à l'invitation!</h3>
-            <p>this is a caption</p>
-      </section>
-      <footer>
-        <a href="mailto:sophie.buda123@gmail.com"><img src="{% static 'img/mail.png' %}" alt="mail" class="mes-icons"></a>
-        <p>&copy; 2016-2017 Sophie Buda et Alexis Durand</p>
-      </footer>
-    </div>
-  </body>
-</html>
+{% block content %}
+<section>
+  <img src="{% static 'img/silhouettes_v0.1.jpg' %}" alt="">
+  <h2>Bienvenue!</h2>
+      <h3>N'oubliez pas de répondre à l'invitation!</h3>
+      <p>this is a caption</p>
+</section>
+{% endblock %}
