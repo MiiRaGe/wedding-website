@@ -4,7 +4,7 @@ from django.contrib.auth.backends import ModelBackend
 from django.core.exceptions import ObjectDoesNotExist
 
 
-class TokenAuthenticationBackend(ModelBackend):
+class DateAuthentication(ModelBackend):
     def authenticate(self, wedding_date=None):
         user_model = get_user_model()
         try:

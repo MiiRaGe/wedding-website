@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'home.context_processor.settings_context_processor',
             ],
         },
     },
@@ -126,6 +127,10 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = '/var/static'
 
-WEDDING_DATE = date(year=2066, day=28, month=2)
+WEDDING_DATE = date(year=2036, day=28, month=2)
 
 LOGIN_URL = '/login/'
+
+AUTHENTICATION_BACKENDS = [
+    'home.middleware.DateAuthentication'
+]
