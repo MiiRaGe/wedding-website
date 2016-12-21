@@ -12,7 +12,7 @@
     <header>
       <a href="index.html" id="logo">
         <h1>Mariage de Sophie & Alexis</h1>
-        <h2>27 mai 2017</h2>
+        {% block weddingdate %}<h2>{{ settings.wedding_date}}</h2>{% endblock %}
       </a>
       {% include 'nav-bar.html' %}
     </header>
