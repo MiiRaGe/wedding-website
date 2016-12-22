@@ -6,51 +6,45 @@
     <h2 id="bienvenue">Bienvenue</h2>
     <div ng-app="app">
         <h3>N'oubliez pas de répondre à l'invitation!</h3>
-        <div ng-controller="FormController">
-            <label for="first_name_main">Prénom</label><br/>
-            <input type="text" name="first_name_main" id="first_name_main" ng-model="first_name_main">
-            </br>
-            <label for="last_name_main">Nom</label><br/>
-            <input type="text" name="last_name_main" id="last_name_main" ng-model="last_name_main">
-            </br>
-            <fieldset id="coming">
-                <legend>Venez-vous au mariage?</legend>
-                <input type="radio" name="coming" id="coming_yes" ng-model="is_coming_to_wedding">
-                <label for="coming_yes">Oui</label><br/>
-                <input type="radio" name="coming" id="coming_no" ng-model="is_coming_to_wedding" checked>
-                <label for="coming_no">Non</label><br/>
-            </fieldset>
-            <div ng-if="is_coming_to_wedding" class="ng-hidden">
-                <label for="NbInvites">Nombre de personnes:</label></br>
-                <select name="NbInvites" id="NbInvites">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select></br>
-                <label for="Repas1">Préférences pour le repas:</label></br>
-                <select name="Repas" id="Repas1">
-                    <option value="Normal">Normal</option>
-                    <option value="Végétarien">Végétarien</option>
-                    <option value="Halal">Halal</option>
-                    <option value="Enfant">Enfant</option>
-                    <option value="Bébé">Bébé (pas de repas)</option>
-                    <option value="Autres">Autres (allergies, etc.)</option>
-                </select></br>
-                <fieldset id="coming2">
-                    <legend>Vous venez au brunch le lendemain?</legend>
-                    <input type="radio" name="coming2" value="yes" id="comingy" checked>
-                    <label for="comingy">Oui</label><br/>
-                    <input type="radio" name="coming2" value="no" id="comingn">
-                    <label for="comingn">Non</label><br/>
-                </fieldset>
-            </div>
-            <button type="submit" ng-click="submitForm()">Valider</button>
-        </div>
+        <ul ng-controller="FormsController">
+            <li ng-repeat="parent in forms">
+                <wedding-form form="parent.form"></wedding-form>
+            </li>
+        </ul>
+        <!--<div ng-controller="FormController">-->
+            <!--<label for="first_name_main">Prénom</label><br/>-->
+            <!--<input type="text" name="first_name_main" id="first_name_main" ng-model="first_name_main">-->
+            <!--</br>-->
+            <!--<label for="last_name_main">Nom</label><br/>-->
+            <!--<input type="text" name="last_name_main" id="last_name_main" ng-model="last_name_main">-->
+            <!--</br>-->
+            <!--<fieldset id="coming">-->
+                <!--<legend>Venez-vous au mariage?</legend>-->
+                <!--<input type="radio" name="coming" id="coming_yes" ng-model="is_coming_to_wedding">-->
+                <!--<label for="coming_yes">Oui</label><br/>-->
+                <!--<input type="radio" name="coming" id="coming_no" ng-model="is_coming_to_wedding" checked>-->
+                <!--<label for="coming_no">Non</label><br/>-->
+            <!--</fieldset>-->
+            <!--<div ng-if="is_coming_to_wedding" class="ng-hidden">-->
+                <!--<label for="Repas1">Préférences pour le repas:</label></br>-->
+                <!--<select name="Repas" id="Repas1">-->
+                    <!--<option value="normal">Normal</option>-->
+                    <!--<option value="vegetarian">Végétarien</option>-->
+                    <!--<option value="halal">Halal</option>-->
+                    <!--<option value="child">Enfant</option>-->
+                    <!--<option value="baby">Bébé (pas de repas)</option>-->
+                    <!--<option value="allergies">Allergies</option>-->
+                <!--</select></br>-->
+                <!--<fieldset id="coming2">-->
+                    <!--<legend>Vous venez au brunch le lendemain?</legend>-->
+                    <!--<input type="radio" name="coming2" value="yes" id="comingy" checked>-->
+                    <!--<label for="comingy">Oui</label><br/>-->
+                    <!--<input type="radio" name="coming2" value="no" id="comingn">-->
+                    <!--<label for="comingn">Non</label><br/>-->
+                <!--</fieldset>-->
+            <!--</div>-->
+            <!--<button type="submit" ng-click="submitForm()">Valider</button>-->
+        <!--</div>-->
     </div>
 </section>
 {% endblock %}
@@ -60,7 +54,6 @@
 <script src="{% static 'js/form_app.js'%}"></script>
 <script type="application/javascript">
     $('document').ready(function () {
-//        $('a.selected').toggleClass('selected');
         $('#home').toggleClass('selected');
     })
 </script>

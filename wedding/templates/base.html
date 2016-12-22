@@ -1,29 +1,37 @@
 {% load static %}
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Mariage S+A | Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
     <link href="https://fonts.googleapis.com/css?family=Rochester|Poiret+One|Roboto:300,400,900" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/main.css'%}">
-  </head>
-  <body>
-    <header>
-      <a href="/" id="logo">
+</head>
+<body>
+<header>
+    <a href="/" id="logo">
         <h1>Mariage de Sophie & Alexis</h1>
         {% block weddingdate %}<h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
-      </a>
-      {% include 'nav-bar.html' %}
-    </header>
-    <div id="wrapper">
-      {% block content %}
-      {% endblock %}
-      <footer>
-        <p>&copy; 2016-2017 Sophie Buda et Alexis Durand</p>
-      </footer>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    {% block js %}
+    </a>
+    {% include 'nav-bar.html' %}
+</header>
+<div id="wrapper">
+    {% block content %}
     {% endblock %}
-  </body>
+    <footer>
+        <p>&copy; 2016-2017 Sophie Buda et Alexis Durand</p>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% block js %}
+{% endblock %}
+</body>
 </html>
