@@ -1,8 +1,10 @@
 import json
 
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from home.forms import AuthenticationForm
@@ -14,7 +16,8 @@ from home.models import JSONFormValues
 def index(request):
     if request.method == 'POST':
         value_to_store = json.dumps(request.POST)
-        JSONFormValues.objects.create(value_to_store)
+        JSONFormValues.objects.create(responses=value_to_store)
+        return HttpResponse('Succes')
     return render(request, 'index.html')
 
 

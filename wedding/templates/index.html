@@ -4,9 +4,10 @@
 <section>
     <!--<img src="{% static 'img/illustration_v0.2.png' %}" alt="" id="silhouettes">-->
     <h2 id="bienvenue">Bienvenue</h2>
-    <div ng-app="app">
+    <div ng-app="app" ng-controller="FormsController">
+        <messages success="success"></messages>
         <h3>N'oubliez pas de répondre à l'invitation!</h3>
-        <ul ng-controller="FormsController" class="list-group">
+        <ul class="list-group">
             <div class="row">
                 <li ng-repeat="parent in forms track by $index" class="list-group-item col-lg-12">
                     <div class="row">
@@ -17,7 +18,7 @@
             </div>
             <button ng-click="addForm()" class="glyphicon glyphicon-plus-sign"></button>
         </ul>
-        <button type="submit" ng-click="submitForm()">Valider</button>
+        <button type="button" ng-click="submitForm()">Valider</button>
     </div>
 </section>
 {% endblock %}

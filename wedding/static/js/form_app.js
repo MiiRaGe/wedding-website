@@ -1,6 +1,6 @@
 angular.module('app', [])
     .config(function ($httpProvider) {
-        $httpProvider.defaults.headers.common["X-CSRF-Token"] = CSRF_TOKEN;
+        $httpProvider.defaults.headers.common["X-CSRFToken"] = CSRF_TOKEN;
     })
     .run();
 
@@ -25,7 +25,16 @@ app.controller('FormsController', function ($scope, $http) {
     };
 
     $scope.submitForm = function () {
-        $http.post('/', $scope.forms);
+        var httpConfig = {
+                url: '/',
+                data: {'form': $scope.forms},
+                method: 'POST'
+            };
+        $http(httpConfig).then(function () {
+            $scope.success = true;
+        }, function () {
+            $scope.success = false;
+        })
     }
 });
 
@@ -50,4 +59,16 @@ app.directive('weddingForm', function () {
         templateUrl: '/static/html/form.html'
     };
 
+});
+
+app.directive('messages', function () {
+   return {
+       scope: {
+           'success': '=success'
+       },
+       template: `<div id="success-message" class="alert alert-success alert-dismissible" role="alert" ng-if="success">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Merci d\'avoir repondu.</strong>
+        </div>`
+   }
 });
