@@ -1,4 +1,8 @@
-angular.module('app', []).run();
+angular.module('app', [])
+    .config(function ($httpProvider) {
+        $httpProvider.defaults.headers.common["X-CSRF-Token"] = CSRF_TOKEN;
+    })
+    .run();
 
 app = angular.module('app');
 
@@ -18,9 +22,10 @@ app.controller('FormsController', function ($scope, $http) {
 
     $scope.removeForm = function (index) {
         $scope.forms.splice(index, 1);
-    }
+    };
+
     $scope.submitForm = function () {
-        $http.post('')
+        $http.post('/', $scope.forms);
     }
 });
 
