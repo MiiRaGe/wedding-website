@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <a href="index.html" id="logo">
+      <a href="/" id="logo">
         <h1>Mariage de Sophie & Alexis</h1>
         {% block weddingdate %}<h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
       </a>
@@ -22,5 +22,8 @@
         <p>&copy; 2016-2017 Sophie Buda et Alexis Durand</p>
       </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    {% block js %}
+    {% endblock %}
   </body>
 </html>

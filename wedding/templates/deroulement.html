@@ -2,46 +2,15 @@
 {% load static %}
 {% block content %}
 <section>
-  <img src="{% static 'img/illustration_v0.2.png' %}" alt="" id="silhouettes">
-  <h2 id="bienvenue">Bienvenue</h2>
-      <h3>N'oubliez pas de répondre à l'invitation!</h3>
-      <form>
-        <fieldset id="coming">
-          <legend>Vous venez au mariage?</legend>
-          <input type="radio" name="coming" value="yes" id="comingy" checked>
-            <label for="comingy">Oui</label><br/>
-          <input type="radio" name="coming" value="no" id="comingn">
-            <label for="comingn">Non</label><br/>
-        </fieldset>
-        <label for="NbInvites">Nombre de personnes:</label></br>
-        <select name="NbInvites" id="NbInvites">
-               <option value="1">1</option>
-               <option value="2">2</option>
-               <option value="3">3</option>
-               <option value="4">4</option>
-               <option value="5">5</option>
-               <option value="6">6</option>
-               <option value="7">7</option>
-               <option value="8">8</option>
-       </select></br>
-       <label for="nom1">Nom et prénom:</label><br/>
-       <input type="text" name="nom1" id="nom1"></br>
-       <label for="Repas1">Préférences pour le repas:</label></br>
-       <select name="Repas" id="Repas1">
-              <option value="Normal">Normal</option>
-              <option value="Végétarien">Végétarien</option>
-              <option value="Halal">Halal</option>
-              <option value="Enfant">Enfant</option>
-              <option value="Bébé">Bébé (pas de repas)</option>
-              <option value="Autres">Autres (allergies, etc.)</option>
-      </select></br>
-      <fieldset id="coming2">
-        <legend>Vous venez au brunch le lendemain?</legend>
-        <input type="radio" name="coming2" value="yes" id="comingy" checked>
-          <label for="comingy">Oui</label><br/>
-        <input type="radio" name="coming2" value="no" id="comingn">
-          <label for="comingn">Non</label><br/>
-      </fieldset>
-      </form>
+    <h2>En construction...</h2>
+    <img src="{% static 'img/logo_construction.jpg' %}" alt="">
 </section>
+{% endblock %}
+
+{% block js %}
+<script type="application/javascript">
+    $('document').ready(function () {
+        $('#deroulement').toggleClass('selected');
+    })
+</script>
 {% endblock %}
