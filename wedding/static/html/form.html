@@ -1,27 +1,46 @@
 <div>
-    <label for="first_name">Prénom</label><br/>
-    <input type="text" name="first_name" id="first_name" ng-model="form.first_name">
-    </br>
-    <label for="last_name">Nom</label><br/>
-    <input type="text" name="last_name" id="last_name" ng-model="form.last_name">
-    </br>
-    <fieldset id="coming">
-        <legend>Venez-vous au mariage?</legend>
-        <input type="radio" name="coming" id="coming_yes" ng-value="true" ng-model="form.is_coming_to_wedding">
-        <label for="coming_yes">Oui</label><br/>
-        <input type="radio" name="coming" id="coming_no" ng-value="false" ng-model="form.is_coming_to_wedding" checked>
-        <label for="coming_no">Non</label><br/>
-    </fieldset>
-    <div ng-if="form.is_coming_to_wedding" class="ng-hidden">
-        <label for="Repas1">Préférences pour le repas:</label></br>
-        <select ng-options="obj.value as obj.label for obj in food_options" ng-model="form.dietetary_restriction" />
-        <fieldset id="coming_brunch">
-            <legend>Vous venez au brunch le lendemain?</legend>
-            <input type="radio" name="coming_brunch" value="yes" id="coming_brunch_yes" checked ng-model="form.is_coming_to_brunch">
-            <label for="coming_brunch_yes">Oui</label><br/>
-            <input type="radio" name="coming_brunch" value="no" id="coming_brunch_no" ng-model="form.is_coming_to_brunch">
-            <label for="coming_brunch_no">Non</label><br/>
-        </fieldset>
+    <div class="col-md-4">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="first_name">Prénom</label>
+                <input type="text" class="form-control" name="first_name" id="first_name" ng-model="form.first_name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Nom</label>
+                <input type="text" class="form-control" name="last_name" id="last_name" ng-model="form.last_name">
+            </div>
+        </form>
+
     </div>
-    <button type="submit" ng-click="submitForm()">Valider</button>
+    <div class="col-md-4">
+        <form class="form-inline">
+            <div class="form-group">
+                <legend>Vient au mariage?</legend>
+                <input type="radio" name="coming" id="coming_yes" ng-value="true" ng-model="form.is_coming_to_wedding">
+                <label for="coming_yes">Oui</label><br/>
+                <input type="radio" name="coming" id="coming_no" ng-value="false" ng-model="form.is_coming_to_wedding"
+                       checked>
+                <label for="coming_no">Non</label><br/>
+            </div>
+        </form>
+
+    </div>
+    <div ng-if="form.is_coming_to_wedding" class="ng-hidden">
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="Repas1">Préférences pour le repas:</label></br>
+                    <select ng-options="obj.value as obj.label for obj in food_options"
+                            ng-model="form.dietetary_restriction"/>
+                    <legend>Vous venez au brunch le lendemain?</legend>
+                    <input type="radio" name="coming_brunch" value="yes" id="coming_brunch_yes" checked
+                           ng-model="form.is_coming_to_brunch">
+                    <label for="coming_brunch_yes">Oui</label><br/>
+                    <input type="radio" name="coming_brunch" value="no" id="coming_brunch_no"
+                           ng-model="form.is_coming_to_brunch">
+                    <label for="coming_brunch_no">Non</label><br/>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

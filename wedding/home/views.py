@@ -1,3 +1,5 @@
+import json
+
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
@@ -5,9 +7,14 @@ from django.shortcuts import render, redirect
 
 from home.forms import AuthenticationForm
 
+from home.models import JSONFormValues
+
 
 @login_required
 def index(request):
+    if request.method == 'POST':
+        value_to_store = json.dumps(request.POST)
+        JSONFormValues.objects.create(value_to_store)
     return render(request, 'index.html')
 
 

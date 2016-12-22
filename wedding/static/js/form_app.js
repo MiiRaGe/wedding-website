@@ -2,20 +2,25 @@ angular.module('app', []).run();
 
 app = angular.module('app');
 
-app.controller('FormsController', function ($scope) {
+app.controller('FormsController', function ($scope, $http) {
     $scope.world = 'world';
     $scope.forms = [];
-    function addForm() {
+    $scope.addForm = function () {
         $scope.forms.push({
-            'form': {},
+            'form': {
+                'is_coming_to_wedding': false,
+            },
             'is_valid': false
         })
-    }
+    };
 
-    addForm();
+    $scope.addForm();
 
-    function removeForm(index) {
+    $scope.removeForm = function (index) {
         $scope.forms.splice(index, 1);
+    }
+    $scope.submitForm = function () {
+        $http.post('')
     }
 });
 
@@ -27,8 +32,7 @@ app.controller('FormController', function ($scope) {
         {'value': 'child', 'label': 'Enfant'},
         {'value': 'baby', 'label': 'Bébé (pas de repas'},
         {'value': 'allergies', 'label': 'Allergies'},
-    ]
-
+    ];
 });
 
 app.directive('weddingForm', function () {
