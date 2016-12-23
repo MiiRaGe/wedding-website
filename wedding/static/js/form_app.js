@@ -1,4 +1,4 @@
-angular.module('app', [])
+angular.module('app', ['ngMaterial'])
     .config(function ($httpProvider) {
         $httpProvider.defaults.headers.common["X-CSRFToken"] = CSRF_TOKEN;
     })
@@ -13,6 +13,7 @@ app.controller('FormsController', function ($scope, $http) {
         $scope.forms.push({
             'form': {
                 'is_coming_to_wedding': false,
+                'dietetary_restriction': 'normal',
             },
             'is_valid': false
         })
@@ -44,17 +45,19 @@ app.controller('FormController', function ($scope) {
         {'value': 'vegetarian', 'label': 'Végétarien'},
         {'value': 'halal', 'label': 'Halal'},
         {'value': 'child', 'label': 'Enfant'},
-        {'value': 'baby', 'label': 'Bébé (pas de repas'},
+        {'value': 'baby', 'label': 'Bébé (pas de repas)'},
         {'value': 'allergies', 'label': 'Allergies'},
     ];
 });
 
 app.directive('weddingForm', function () {
     return {
-        restrict: 'E',
+        restrict: 'A',
         controller: 'FormController',
         scope: {
-            'form': '=form'
+            'form': '=form',
+            'removeForm': '=removeForm',
+            'index': '=index'
         },
         templateUrl: '/static/html/form.html'
     };

@@ -3,20 +3,20 @@ GENERAL STUFF
 ******************************************/
 
 #wrapper {
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 0 5%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  background-color: #f8f8f8;
-  color: #777777;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: #f8f8f8;
+    color: #777777;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /*****************************************
@@ -24,50 +24,50 @@ HEADER and HEADINGS
 ******************************************/
 
 header {
-  float: left;
-  margin: 0 0  30px 0;
-  padding: 5px 0 0 0;
-  width: 100%;
+    float: left;
+    margin: 0 0 30px 0;
+    padding: 5px 0 0 0;
+    width: 100%;
 }
 
 #logo {
-  text-align: center;
-  margin: 0;
-  text-decoration:none;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
 }
 
 /* blue header */
 header {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 /* main headings text*/
 h1, h2 {
-  color: #151f31;
-  text-transform: uppercase;
-      }
+    color: #151f31;
+    text-transform: uppercase;
+}
 
 h1 {
-  font-family: 'Poiret One', sans-serif;
-  margin: 15px 0;
-  font-size: 2em;
-  font-weight: normal;
-  line-height:0.8em;
-      }
+    font-family: 'Poiret One', sans-serif;
+    margin: 15px 0;
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 0.8em;
+}
 
 h2 {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: normal;
-  margin: -5px 0 0;
-      }
+    font-family: 'Poiret One', sans-serif;
+    font-weight: normal;
+    margin: -5px 0 0;
+}
 
 h3 {
-  font-family: 'Poiret One', sans-serif;
-  font-weight: normal;
-  font-size: 1.25em;
-  color: #151f31  ;
-  /*border-bottom: 2px solid #151f31;
-  display: inline-block;*/
+    font-family: 'Poiret One', sans-serif;
+    font-weight: normal;
+    font-size: 1.25em;
+    color: #151f31;
+    /*border-bottom: 2px solid #151f31;
+    display: inline-block;*/
 }
 
 /*****************************************
@@ -75,42 +75,42 @@ NAVIGATION and LINKS
 ******************************************/
 
 a {
-  color: #151f31;
+    color: #151f31;
 }
 
 nav {
-  background-color: #151f31;
-  text-align: center;
-  padding: 10px 0;
-  margin: 20px 0 0;
+    background-color: #151f31;
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0 10px;
-  padding: 0;
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
 }
 
 nav li {
-  display: inline-block;
+    display: inline-block;
 }
 
 /* navigation links*/
 nav a, nav a:visited {
-  color: #7D5F1D;
-  text-decoration: none;
-      }
+    color: #7D5F1D;
+    text-decoration: none;
+}
 
 nav a.selected, nav a:hover {
- color: #b18e51;
+    color: #b18e51;
 }
 
 nav a {
-  color: #ceb17c;
-  font-weight: lighter;
-  font-size: 1.5em;
-  padding: 15px 10px;
-  font-family: 'Rochester', sans-serif;
+    color: #ceb17c;
+    font-weight: lighter;
+    font-size: 1.5em;
+    padding: 15px 10px;
+    font-family: 'Rochester', sans-serif;
 }
 
 /*****************************************
@@ -119,18 +119,18 @@ FOOTER
 
 /* footer*/
 footer {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.75em;
-  text-align: center;
-  clear: both;
-  padding-top: 50px;
-  color: #ccc;
-      }
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75em;
+    text-align: center;
+    clear: both;
+    padding-top: 50px;
+    color: #ccc;
+}
 
 .mes-icons {
-  width: 30px;
-  height: 30px;
-  margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }
 
 /*****************************************
@@ -138,10 +138,34 @@ home only
 ******************************************/
 
 #silhouettes {
-  padding: 0;
-  list-style: none;
-  float: left;
-  width: 45%;
-  margin: 2.5%;
-  color: #ccc;
+    padding: 0;
+    list-style: none;
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    color: #ccc;
+}
+
+.selectFood {
+    height: 100%;
+    width: 150px;
+    overflow-y: visible;
+    max-height: none;
+    max-width: none;
+}
+
+.selectFood md-select-menu._md {
+    width: 100%;
+    height: 300px;
+    max-height: none;
+    max-width: none;
+    overflow-y: visible;
+}
+
+.selectFood md-content._md {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    max-width: none;
+    overflow-y: visible;
 }
