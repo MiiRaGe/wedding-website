@@ -95,13 +95,7 @@ nav li {
     display: inline-block;
 }
 
-/* navigation links*/
-nav a, nav a:visited {
-    color: #7D5F1D;
-    text-decoration: none;
-}
-
-nav a.selected, nav a:hover {
+nav a.selected, nav a:hover, nav a:focus  {
     color: #b18e51;
 }
 
