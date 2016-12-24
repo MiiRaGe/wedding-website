@@ -10,24 +10,24 @@
         <div ng-app="app" ng-controller="FormsController">
             <messages success="success"></messages>
             <h3>N'oubliez pas de répondre à l'invitation!</h3>
-            <ul class="list-group">
-                <div class="row">
-                    <table class="table table-bordered table-condensed">
-                        <tr>
-                            <th>Prenom</th>
-                            <th>Nom</th>
-                            <th>Vient au mariage?</th>
-                            <th>Préférences pour le repas</th>
-                            <th>Vient au brunch le dimanche?</th>
-                            <th>Supprimer?</th>
-                        </tr>
-                        </thead>
-                        <tr wedding-form form="parent.form" remove-form="removeForm" index="$index"
-                            ng-repeat="parent in forms track by $index"></tr>
-                    </table>
-                </div>
-                <button ng-click="addForm()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>Ajouter une personne</button>
-            </ul>
+            <md-toolbar class="md-theme-light">
+                <h2 class="md-toolbar-tools">
+                    <span>Formulaire de réponse</span>
+                </h2>
+            </md-toolbar>
+
+            <md-content>
+                <md-list>
+                    <md-list-item class="md-3-line" ng-repeat="parent in forms track by $index">
+                        <div wedding-form form="parent.form" remove-form="removeForm" index="$index"
+                             class="md-list-item-text"></div>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+            <button ng-click="addForm()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>Ajouter
+                une personne
+            </button>
             <button type="button" ng-click="submitForm()" class="btn btn-default">Valider</button>
         </div>
     </section>

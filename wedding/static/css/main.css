@@ -3,7 +3,7 @@ GENERAL STUFF
 ******************************************/
 
 #wrapper {
-    max-width: 940px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 5%;
 }
@@ -141,25 +141,38 @@ home only
 }
 
 .selectFood {
-    height: 100%;
-    width: 150px;
+    height: 288px;
+    width: 180px;
     overflow-y: visible;
     max-height: none;
     max-width: none;
 }
 
 .selectFood md-select-menu._md {
-    width: 100%;
-    height: 300px;
+    height: 288px;
+    width: 180px;
     max-height: none;
     max-width: none;
     overflow-y: visible;
 }
 
 .selectFood md-content._md {
-    width: 100%;
-    height: 100%;
+    height: 288px;
+    width: 180px;
     max-height: none;
     max-width: none;
     overflow-y: visible;
 }
+
+.coming_to_wedding {
+    width: 120px;
+}
+
+.coming_to_brunch {
+    width: 200px;
+}
+
+.dietetary_restriction {
+    width: 150px;
+}
+
