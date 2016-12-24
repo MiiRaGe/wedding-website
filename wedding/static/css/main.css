@@ -24,8 +24,15 @@ img {
     font-weight: 300;
     font-size: 1.5;
     color: #777777;
+    margin-bottom: 0.5em;
 }
 
+label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    color: #777777 !important;
+}
 
 /*****************************************
 HEADER and HEADINGS
@@ -125,7 +132,7 @@ nav a {
 
 .hotel-link {
   font-family: 'Roboto', sans-serif;
-  color: ##151f31;
+  color: #151f31;
 }
 
 .hotel-link a, .supprimer {
@@ -156,6 +163,16 @@ footer {
 /*****************************************
 home only
 ******************************************/
+
+div.md-on {
+  background-color: #151f31;
+  border-color: #777;
+}
+
+
+div.md-off, div.md-checked, div.md-on {
+  border-color: #777 !important;
+}
 
 #silhouettes {
     padding: 0;
@@ -212,10 +229,10 @@ home only
 
 .add-person-card {
     box-shadow: none;
-    color: darkblue;
+    color: #151f31;
     width: 300px;
     height: 280px;
-    border: 2px dotted darkblue;
+    border: 2px dotted #151f31;
     background: none;
 }
 
