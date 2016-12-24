@@ -169,6 +169,17 @@ home only
 }
 
 .invitation-card {
-    /*width: 300px;*/
-    max-height: 580px;
+    width: 300px;
+}
+
+.inner-card {
+    padding-bottom: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.comming-to-wedding {
+    margin-top: 0;
 }

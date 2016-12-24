@@ -1,35 +1,26 @@
-<md-card-title style="height: 130px">
-    <md-card-title-text>
-        <span class="md-headline">
-            <md-content layout="row" layout-padding>
-                <md-input-container flex="50">
-                    <label>Prenom</label>
-                    <input ng-model="form.first_name">
-                </md-input-container>
-
-                <md-input-container flex="50">
-                    <label>Nom</label>
-                    <input ng-model="form.last_name">
-                </md-input-container>
-            </md-content>
-        </span>
-    </md-card-title-text>
-</md-card-title>
-<md-card-content layout="column" layout-align="space-between" class="layout-align-space-between-stretch">
-    <md-input-container flex-fill layout="column">
+<md-card-content layout="column" layout-align="space-between" class="layout-align-space-between-stretch inner-card">
+    <md-input-container style="margin-top: 16px;">
+        <label>Prenom</label>
+        <input ng-model="form.first_name">
+    </md-input-container>
+    <md-input-container style="margin: 5;">
+        <label>Nom</label>
+        <input ng-model="form.last_name">
+    </md-input-container>
+    <md-input-container flex-fill layout="column" class="no-margin-bottom comming-to-wedding">
         <div flex>Vient au mariage?</div>
         <md-radio-group ng-model="form.is_coming_to_wedding" layout="row">
             <md-radio-button ng-value="true">Oui</md-radio-button>
             <md-radio-button ng-value="false">Non</md-radio-button>
         </md-radio-group>
     </md-input-container>
-    <md-input-container class="dietetary_restriction" ng-if="form.is_coming_to_wedding" flex-fill>
+    <md-input-container class="dietetary_restriction no-margin-bottom" ng-if="form.is_coming_to_wedding" flex>
         <div>Préférences pour le repas</div>
-        <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood">
+        <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood" flex>
             <md-option ng-repeat="obj in food_options" ng-value="obj.value">{{ obj.label }}</md-option>
         </md-select>
     </md-input-container>
-    <md-input-container ng-if="form.is_coming_to_wedding" flex-fill layout="column">
+    <md-input-container ng-if="form.is_coming_to_wedding" flex-fill layout="column" class="no-margin-bottom">
         <div>Vient au brunch le dimanche?</div>
         <md-radio-group ng-model="form.is_coming_to_brunch" layout="row" >
             <md-radio-button ng-value="true">Oui</md-radio-button>
