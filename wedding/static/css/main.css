@@ -3,7 +3,7 @@ GENERAL STUFF
 ******************************************/
 
 #wrapper {
-    max-width: 1080px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 0 5%;
 }
@@ -164,15 +164,11 @@ home only
     overflow-y: visible;
 }
 
-.coming_to_wedding {
-    width: 120px;
+.md-headline md-content{
+    background-color: white;
 }
 
-.coming_to_brunch {
-    width: 200px;
+.invitation-card {
+    /*width: 300px;*/
+    max-height: 580px;
 }
-
-.dietetary_restriction {
-    width: 150px;
-}
-

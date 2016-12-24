@@ -7,21 +7,10 @@
         <div ng-controller="FormsController">
             <messages success="success"></messages>
             <h3>N'oubliez pas de répondre à l'invitation!</h3>
-            <md-toolbar class="md-theme-light">
-                <h2 class="md-toolbar-tools">
-                    <span>Formulaire de réponse</span>
-                </h2>
-            </md-toolbar>
-
-            <md-content>
-                <md-list>
-                    <md-list-item class="md-3-line" ng-repeat="parent in forms track by $index">
-                        <div wedding-form form="parent.form" remove-form="removeForm" index="$index"
-                             class="md-list-item-text"></div>
-                        <md-divider ng-if="!$last"></md-divider>
-                    </md-list-item>
-                </md-list>
-            </md-content>
+            <div class="card-container" layout-wrap>
+                <md-card class="invitation-card" wedding-form form="parent.form" remove-form="removeForm" index="$index" ng-repeat="parent in forms track by $index" flex>
+                </md-card>
+            </div>
             <button ng-click="addForm()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>Ajouter
                 une personne
             </button>
