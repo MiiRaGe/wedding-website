@@ -169,6 +169,40 @@ home only
 }
 
 .invitation-card {
-    /*width: 300px;*/
-    max-height: 580px;
+    width: 300px;
+}
+
+.inner-card {
+    padding-bottom: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.comming-to-wedding {
+    margin-top: 0;
+}
+
+.add-person-card {
+    box-shadow: none;
+    color: darkblue;
+    width: 300px;
+    height: 280px;
+    border-style: dotted;
+    border-color: darkblue;
+    background: none;
+}
+
+.add-person-card div {
+    width: 300px;
+    height: 280px;
+    display:table;
+    text-align: center;
+}
+
+.add-person-card div span.glyphicon {
+    display:table-cell;
+    vertical-align:middle;
+    font-size: 6em;
 }
