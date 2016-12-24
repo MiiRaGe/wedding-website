@@ -7,15 +7,20 @@
         <div ng-controller="FormsController">
             <messages success="success"></messages>
             <h3>N'oubliez pas de répondre à l'invitation!</h3>
-            <div class="card-container" layout-wrap layout="row">
-                <md-card ng-style="{'max-height': parent.form.is_coming_to_wedding ? '600px' : '280px'}" class="invitation-card" wedding-form form="parent.form" remove-form="removeForm" index="$index" ng-repeat="parent in forms track by $index">
-                </md-card>
-                <md-card class="add-person-card">
-                    <div ng-click="addForm()"><span class="glyphicon glyphicon-plus-sign"></span>
-                    </div>
-                </md-card>
-            </div>
-            <button type="button" ng-click="submitForm()" class="btn btn-default">Valider</button>
+            <form name="attendanceForm">
+                <div class="card-container" layout-wrap layout="row">
+                    <md-card ng-style="{'max-height': parent.form.is_coming_to_wedding ? '600px' : '280px'}"
+                             class="invitation-card" wedding-form form="parent.form" remove-form="removeForm"
+                             attendance-form="attendanceForm"
+                             index="$index" ng-repeat="parent in forms track by $index">
+                    </md-card>
+                    <md-card class="add-person-card">
+                        <div ng-click="addForm()"><span class="glyphicon glyphicon-plus-sign"></span>
+                        </div>
+                    </md-card>
+                </div>
+                <button type="submit" ng-click="submitForm()" class="btn btn-default">Valider</button>
+            </form>
         </div>
     </section>
 {% endblock %}

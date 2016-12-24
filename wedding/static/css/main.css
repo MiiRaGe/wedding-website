@@ -205,3 +205,14 @@ home only
     vertical-align:middle;
     font-size: 6em;
 }
+
+.asterisk::after {
+    content: ' *';
+    font-size: 13px;
+    vertical-align: top;
+}
+
+.error {
+    color: red;
+    font-size: 1.1em;
+}

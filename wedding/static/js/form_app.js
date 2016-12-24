@@ -12,8 +12,9 @@ app.controller('FormsController', function ($scope, $http) {
     $scope.addForm = function () {
         $scope.forms.push({
             'form': {
-                'is_coming_to_wedding': false,
+                // 'is_coming_to_wedding': false,
                 'dietetary_restriction': 'normal',
+                // 'is_coming_to_brunch': false,
             },
             'is_valid': false
         })
@@ -26,16 +27,18 @@ app.controller('FormsController', function ($scope, $http) {
     };
 
     $scope.submitForm = function () {
-        var httpConfig = {
-                url: '/',
-                data: {'form': $scope.forms},
-                method: 'POST'
-            };
-        $http(httpConfig).then(function () {
-            $scope.success = true;
-        }, function () {
-            $scope.success = false;
-        })
+        if ($scope.attendanceForm.$valid) {
+            var httpConfig = {
+                    url: '/',
+                    data: {'form': $scope.forms},
+                    method: 'POST'
+                };
+            $http(httpConfig).then(function () {
+                $scope.success = true;
+            }, function () {
+                $scope.success = false;
+            })
+        }
     }
 });
 
@@ -48,6 +51,9 @@ app.controller('FormController', function ($scope) {
         {'value': 'baby', 'label': 'Bébé (pas de repas)'},
         {'value': 'allergies', 'label': 'Allergies'},
     ];
+    $scope.resetForm = function () {
+        $scope.attendanceForm.$submitted = false;
+    }
 });
 
 app.directive('weddingForm', function () {
@@ -57,7 +63,8 @@ app.directive('weddingForm', function () {
         scope: {
             'form': '=form',
             'removeForm': '=removeForm',
-            'index': '=index'
+            'index': '=index',
+            'attendanceForm': '=attendanceForm'
         },
         templateUrl: '/static/html/form.html'
     };
