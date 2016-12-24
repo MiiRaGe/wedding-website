@@ -19,6 +19,14 @@ img {
     max-width: 100%;
 }
 
+.md-subhead {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.5;
+    color: #777777;
+}
+
+
 /*****************************************
 HEADER and HEADINGS
 ******************************************/
@@ -61,13 +69,21 @@ h2 {
     margin: -5px 0 0;
 }
 
-h3, .md-headline {
+h3 {
+    font-family: 'Poiret One', sans-serif;
+    font-weight: normal;
+    font-size: 1.5em;
+    color: #151f31;
+    /*border-bottom: 2px solid #151f31;
+    display: inline-block;*/
+}
+
+.md-headline {
     font-family: 'Poiret One', sans-serif;
     font-weight: normal;
     font-size: 1.75em;
     color: #151f31;
-    /*border-bottom: 2px solid #151f31;
-    display: inline-block;*/
+    margin-bottom: 0.5em;
 }
 
 /*****************************************
@@ -112,9 +128,9 @@ nav a {
   color: ##151f31;
 }
 
-.hotel-link a {
+.hotel-link a, .supprimer {
   font-family: 'Roboto', sans-serif;
-  color: ##151f31;
+  color: #151f31;
 }
 
 /*****************************************
