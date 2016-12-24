@@ -49,13 +49,13 @@
             <md-radio-button ng-value="false">Non</md-radio-button>
         </md-radio-group>
     </md-input-container>
-    <md-input-container flex="20" class="dietetary_restriction" ng-if="form.is_coming_to_wedding">
+    <md-input-container flex="19" class="dietetary_restriction" ng-if="form.is_coming_to_wedding">
         <label>Préférences pour le repas</label>
         <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood">
             <md-option ng-repeat="obj in food_options" ng-value="obj.value">{{ obj.label }}</md-option>
         </md-select>
     </md-input-container>
-    <md-input-container flex="25" class="coming_to_brunch" ng-if="form.is_coming_to_wedding">
+    <md-input-container flex="23" class="coming_to_brunch" ng-if="form.is_coming_to_wedding">
         <p style="margin-bottom: 20px;">
             <label>Vient au brunch le dimanche?</label>
         </p>
