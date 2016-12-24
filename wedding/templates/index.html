@@ -10,10 +10,11 @@
             <div class="card-container" layout-wrap layout="row">
                 <md-card ng-style="{'max-height': parent.form.is_coming_to_wedding ? '600px' : '280px'}" class="invitation-card" wedding-form form="parent.form" remove-form="removeForm" index="$index" ng-repeat="parent in forms track by $index">
                 </md-card>
+                <md-card class="add-person-card">
+                    <div ng-click="addForm()"><span class="glyphicon glyphicon-plus-sign"></span>
+                    </div>
+                </md-card>
             </div>
-            <button ng-click="addForm()" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span>Ajouter
-                une personne
-            </button>
             <button type="button" ng-click="submitForm()" class="btn btn-default">Valider</button>
         </div>
     </section>
