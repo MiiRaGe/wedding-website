@@ -1,72 +1,42 @@
-<!--td>
-    <input type="text" class="form-control" name="first_name" id="first_name" ng-model="form.first_name">
-</td>
-<td>
-    <input type="text" class="form-control" name="last_name" id="last_name" ng-model="form.last_name">
-</td>
-<td>
-    <md-radio-group ng-model="form.is_coming_to_wedding">
-        <md-radio-button ng-value="true">Oui</md-radio-button>
-        <md-radio-button ng-value="false">Non</md-radio-button>
-    </md-radio-group>
-</td>
-<td>
-    <div ng-if="form.is_coming_to_wedding">
-        <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood">
-            <md-option ng-repeat="obj in food_options" ng-value="obj.value">{{ obj.label }}</md-option>
-        </md-select>
-    </div>
-</td>
-<td>
-    <span ng-if="form.is_coming_to_wedding">
-    <md-radio-group ng-model="form.is_coming_to_brunch">
-        <md-radio-button ng-value="true">Oui</md-radio-button>
-        <md-radio-button ng-value="false">Non</md-radio-button>
-    </md-radio-group>
-    </span>
-</td>
-<td style="text-align: center; vertical-align: middle;">
-    <span ng-click="removeForm(index)" class="glyphicon glyphicon-trash" style="font-size: 1.2em;"></span>
-</td -->
+<md-card-title style="height: 130px">
+    <md-card-title-text>
+        <span class="md-headline">
+            <md-content layout="row" layout-padding>
+                <md-input-container flex="50">
+                    <label>Prenom</label>
+                    <input ng-model="form.first_name">
+                </md-input-container>
 
-<md-content layout-gt-sm="row" layout-padding>
-    <md-input-container flex="20">
-        <label>Prenom</label>
-        <input ng-model="form.first_name">
-    </md-input-container>
-
-    <md-input-container flex="20">
-        <label>Nom</label>
-        <input ng-model="form.last_name">
-    </md-input-container>
-
-    <md-input-container flex="16" class="coming_to_wedding">
-        <p style="margin-bottom: 20px;">
-            <label>Vient au mariage?</label>
-        </p>
-        <md-radio-group ng-model="form.is_coming_to_wedding">
+                <md-input-container flex="50">
+                    <label>Nom</label>
+                    <input ng-model="form.last_name">
+                </md-input-container>
+            </md-content>
+        </span>
+    </md-card-title-text>
+</md-card-title>
+<md-card-content layout="column" layout-align="space-between" class="layout-align-space-between-stretch">
+    <md-input-container flex-fill layout="column">
+        <div flex>Vient au mariage?</div>
+        <md-radio-group ng-model="form.is_coming_to_wedding" layout="row">
             <md-radio-button ng-value="true">Oui</md-radio-button>
             <md-radio-button ng-value="false">Non</md-radio-button>
         </md-radio-group>
     </md-input-container>
-    <md-input-container flex="19" class="dietetary_restriction" ng-if="form.is_coming_to_wedding">
-        <label>Préférences pour le repas</label>
+    <md-input-container class="dietetary_restriction" ng-if="form.is_coming_to_wedding" flex-fill>
+        <div>Préférences pour le repas</div>
         <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood">
             <md-option ng-repeat="obj in food_options" ng-value="obj.value">{{ obj.label }}</md-option>
         </md-select>
     </md-input-container>
-    <md-input-container flex="23" class="coming_to_brunch" ng-if="form.is_coming_to_wedding">
-        <p style="margin-bottom: 20px;">
-            <label>Vient au brunch le dimanche?</label>
-        </p>
-        <md-radio-group ng-model="form.is_coming_to_brunch">
+    <md-input-container ng-if="form.is_coming_to_wedding" flex-fill layout="column">
+        <div>Vient au brunch le dimanche?</div>
+        <md-radio-group ng-model="form.is_coming_to_brunch" layout="row" >
             <md-radio-button ng-value="true">Oui</md-radio-button>
             <md-radio-button ng-value="false">Non</md-radio-button>
         </md-radio-group>
     </md-input-container>
-    <md-input-container flex="5" flex-fill flex-padding flex-margin ng-class="{'flex-offset-35': !form.is_coming_to_wedding}">
-        <div style="text-align: center; vertical-align: middle;" flex-fillin>
-            <span ng-click="removeForm(index)" class="glyphicon glyphicon-trash" style="font-size: 1.2em;"></span>
-        </div>
-    </md-input-container>
-</md-content>
+</md-card-content>
+<md-card-actions layout="row" layout-align="end center">
+    <md-button ng-click="removeForm(index)">Supprimer</md-button>
+</md-card-actions>
