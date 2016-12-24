@@ -61,10 +61,10 @@ h2 {
     margin: -5px 0 0;
 }
 
-h3 {
+h3, .md-headline {
     font-family: 'Poiret One', sans-serif;
     font-weight: normal;
-    font-size: 1.25em;
+    font-size: 1.75em;
     color: #151f31;
     /*border-bottom: 2px solid #151f31;
     display: inline-block;*/
@@ -105,6 +105,16 @@ nav a {
     font-size: 1.5em;
     padding: 15px 10px;
     font-family: 'Rochester', sans-serif;
+}
+
+.hotel-link {
+  font-family: 'Roboto', sans-serif;
+  color: ##151f31;
+}
+
+.hotel-link a {
+  font-family: 'Roboto', sans-serif;
+  color: ##151f31;
 }
 
 /*****************************************
