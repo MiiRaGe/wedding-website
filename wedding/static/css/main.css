@@ -38,28 +38,46 @@ label {
 HEADER and HEADINGS
 ******************************************/
 
-header {
-    float: left;
-    margin: 0 0 30px 0;
-    padding: 5px 0 0 0;
-    width: 100%;
+#hero {
+  background: url("../img/background_img.jpg") no-repeat center center;
+  background-size: cover;
+  max-height: 500px;
+  padding: 0 5px;
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%;
 }
 
-#logo {
-    text-align: center;
-    margin: 0;
-    text-decoration: none;
+#text-top {
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
 }
 
-/* blue header */
-header {
-    background-color: #fff;
+.banner-top {
+  max-width: 200px;
+  display: inline-block;;
+  margin-left: auto;
+  margin-right: auto
 }
 
-/* main headings text*/
+header h1, header h2 {
+  color: #fff;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+header h2 {
+  display: inline-block;
+  align: left;
+}
+
 h1, h2 {
-    color: #151f31;
+  color: #151f31;
     text-transform: uppercase;
+    padding: 5px 0;
+    margin: 10px 0 0;
 }
 
 h1 {
@@ -102,16 +120,14 @@ a {
 }
 
 nav {
-    background-color: #151f31;
+    background-color: #131e31;
     text-align: center;
-    padding: 10px 0;
-    margin: 20px 0 0;
+    margin: 0px 0px 20px 0px;
+    padding: 10px 0px;
 }
 
 nav ul {
     list-style: none;
-    margin: 0 10px;
-    padding: 0;
 }
 
 nav li {
