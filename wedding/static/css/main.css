@@ -259,3 +259,9 @@ div.md-off, div.md-checked, div.md-on {
     color: red;
     font-size: 1.1em;
 }
+
+#success-message {
+    position: fixed;
+    top: 10%;
+    left:10%;
+}

@@ -18,8 +18,15 @@ app.controller('FormsController', function ($scope, $http) {
             'is_valid': false
         })
     };
-
-    $scope.addForm();
+    if (FORM_ID) {
+        $http.get('/responses/' + FORM_ID + '/').then(
+            function (response) {
+                $scope.forms = response.data.response.form;
+            }
+        )
+    } else {
+        $scope.addForm();
+    }
 
     $scope.removeForm = function (index) {
         $scope.forms.splice(index, 1);

@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 from home.forms import AuthenticationForm
@@ -16,9 +17,21 @@ from home.models import JSONFormValues
 def index(request):
     if request.method == 'POST':
         value_to_store = request.body.decode('utf8')
-        JSONFormValues.objects.create(responses=value_to_store)
+        if request.session.get('form_id'):
+            JSONFormValues.objects.filter(id=request.session.get('form_id')).update(responses=value_to_store)
+        else:
+            form_value = JSONFormValues.objects.create(responses=value_to_store)
+            request.session['form_id'] = form_value.id
         return HttpResponse('Success')
     return render(request, 'index.html')
+
+
+@login_required
+def previous_response(request, response_id):
+    print(response_id, request.session.get('form_id'))
+    if int(response_id) != request.session.get('form_id'):
+        return JsonResponse({'response': []})
+    return JsonResponse({'response': json.loads(JSONFormValues.objects.get(id=request.session.get('form_id')).responses)})
 
 
 @login_required
