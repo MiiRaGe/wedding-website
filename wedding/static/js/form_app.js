@@ -6,7 +6,7 @@ angular.module('app', ['ngMaterial'])
 
 app = angular.module('app');
 
-app.controller('FormsController', function ($scope, $http) {
+app.controller('FormsController', function ($scope, $http, formId) {
     $scope.forms = [];
     $scope.addForm = function () {
         $scope.forms.push({
@@ -18,8 +18,9 @@ app.controller('FormsController', function ($scope, $http) {
             'is_valid': false
         })
     };
-    if (FORM_ID) {
-        $http.get('/responses/' + FORM_ID + '/').then(
+    if (formId) {
+        $scope.update = true;
+        $http.get('/responses/' + formId + '/').then(
             function (response) {
                 $scope.forms = response.data.response.form;
             }
@@ -39,7 +40,10 @@ app.controller('FormsController', function ($scope, $http) {
                 data: {'form': $scope.forms},
                 method: 'POST'
             };
-            $http(httpConfig).then(function () {
+            $http(httpConfig).then(function (response) {
+                console.log(response)
+                formId = response.data;
+                $scope.update = true;
                 $scope.success = true;
             }, function () {
                 $scope.success = false;
@@ -98,7 +102,7 @@ app.directive('messages', function () {
         },
         template: `<div id="success-message" class="alert alert-success alert-dismissible" role="alert" ng-if="success">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Merci d\'avoir repondu.</strong>
+          <strong>Formulaire correctement sauvegardé, Merci.</strong>
         </div>`
     }
 });

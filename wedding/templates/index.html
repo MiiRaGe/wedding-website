@@ -19,7 +19,10 @@
                         </div>
                     </md-card>
                 </div>
-                <button type="submit" ng-click="submitForm()" class="btn btn-default">Valider</button>
+                <button type="submit" ng-click="submitForm()" class="btn btn-default">
+                    <span ng-if="!update">Valider</span>
+                    <span ng-if="update">Modifier</span>
+                </button>
             </form>
         </div>
     </section>
@@ -32,6 +35,6 @@
         })
     </script>
     <script type="application/javascript">
-        var FORM_ID='{{ request.session.form_id }}';
+        angular.module('app').value('formId', '{{ request.session.form_id }}');
     </script>
 {% endblock %}

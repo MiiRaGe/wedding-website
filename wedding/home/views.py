@@ -17,12 +17,14 @@ from home.models import JSONFormValues
 def index(request):
     if request.method == 'POST':
         value_to_store = request.body.decode('utf8')
-        if request.session.get('form_id'):
+        form_id = request.session.get('form_id')
+        if form_id:
             JSONFormValues.objects.filter(id=request.session.get('form_id')).update(responses=value_to_store)
         else:
             form_value = JSONFormValues.objects.create(responses=value_to_store)
             request.session['form_id'] = form_value.id
-        return HttpResponse('Success')
+            form_id = form_value.id
+        return HttpResponse(form_id)
     return render(request, 'index.html')
 
 
