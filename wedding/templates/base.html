@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Mariage S+A | Home</title>
+    <title>Sophie + Alexis</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,10 +15,14 @@
 </head>
 <body>
 <header>
-    <a href="/" id="logo">
+  <div id="hero">
+    <a href="/" id="text-top">
         <h1>Mariage de Sophie & Alexis</h1>
         {% block weddingdate %}<h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
+        <img src="{% static 'img/danseurs.png'%}" alt="" class="banner-top" id="danseurs"></img>
+        <img src="{% static 'img/pic_green.png'%}" alt="" class="banner-top" id="pic_green"></img>
     </a>
+  </div>
     {% include 'nav-bar.html' %}
 </header>
 <div id="wrapper" class="container" ng-app="app" >
