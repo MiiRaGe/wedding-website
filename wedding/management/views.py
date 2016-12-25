@@ -21,5 +21,5 @@ def all_responses(request):
     }
     for json_value in json_values:
         responses = json.loads(json_value.responses)
-        all_responses['responses'].extend(responses.get('form', []))
+        all_responses['responses'].extend(responses.get('form', [{}]))
     return JsonResponse(all_responses)
