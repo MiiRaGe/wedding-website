@@ -6,26 +6,34 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Rochester|Poiret+One|Roboto:300,400,900" rel="stylesheet">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     {% block css %}
     {% endblock %}
-    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
 <header>
-  <div id="hero">
-    <a href="/" id="text-top">
-        <h1>Mariage de Sophie & Alexis</h1>
-        {% block weddingdate %}<h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
-        <img src="{% static 'img/danseurs.png'%}" alt="" class="banner-top" id="danseurs"></img>
-        <img src="{% static 'img/pic_green.png'%}" alt="" class="banner-top" id="pic_green"></img>
-    </a>
-  </div>
+    <div id="hero">
+
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-2"><img src="{% static 'img/danseurs.png' %}" alt="" class="banner-top"
+                                                       id="danseurs"></img></div>
+            <div class="col-lg-4" style="text-align: center">
+                <a href="/" id="text-top">
+                    <h1>Mariage de Sophie & Alexis</h1>{% block weddingdate %}
+                    <h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
+                </a>
+            </div>
+            <div class="col-lg-4"><img src="{% static 'img/pic_green.png' %}" alt="" class="banner-top"
+                                       id="pic_green"></img></div>
+
+        </div>
+    </div>
     {% include 'nav-bar.html' %}
 </header>
-<div id="wrapper" class="container" ng-app="app" >
+<div id="wrapper" class="container" ng-app="app">
     {% block content %}
     {% endblock %}
     <footer>
