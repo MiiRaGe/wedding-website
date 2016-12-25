@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div ng-controller="AdminController">
+            <h3>N'oubliez pas de répondre à l'invitation!</h3>
+            <form name="attendanceForm">
+                <div class="card-container" layout-wrap layout="row">
+                    <md-card ng-style="{'max-height': parent.form.is_coming_to_wedding ? '600px' : '280px'}"
+                             class="invitation-card" wedding-form form="parent.form" remove-form="removeForm"
+                             attendance-form="attendanceForm"
+                             index="$index" ng-repeat="parent in forms track by $index">
+                    </md-card>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+    <script type="application/javascript">
+        $('document').ready(function () {
+            $('#deroulement').toggleClass('selected');
+        })
+    </script>
+{% endblock %}

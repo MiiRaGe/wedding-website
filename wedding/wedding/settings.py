@@ -133,5 +133,6 @@ WEDDING_DATE = date(year=2036, day=28, month=2)
 LOGIN_URL = '/login/'
 
 AUTHENTICATION_BACKENDS = [
-    'home.middleware.DateAuthentication'
+    'home.middleware.DateAuthentication',
+    'django.contrib.auth.backends.ModelBackend'
 ]

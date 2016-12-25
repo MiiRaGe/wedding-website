@@ -7,7 +7,6 @@ angular.module('app', ['ngMaterial'])
 app = angular.module('app');
 
 app.controller('FormsController', function ($scope, $http) {
-    $scope.world = 'world';
     $scope.forms = [];
     $scope.addForm = function () {
         $scope.forms.push({
@@ -29,10 +28,10 @@ app.controller('FormsController', function ($scope, $http) {
     $scope.submitForm = function () {
         if ($scope.attendanceForm.$valid) {
             var httpConfig = {
-                    url: '/',
-                    data: {'form': $scope.forms},
-                    method: 'POST'
-                };
+                url: '/',
+                data: {'form': $scope.forms},
+                method: 'POST'
+            };
             $http(httpConfig).then(function () {
                 $scope.success = true;
             }, function () {
@@ -40,6 +39,20 @@ app.controller('FormsController', function ($scope, $http) {
             })
         }
     }
+});
+
+app.controller('AdminController', function ($scope, $http) {
+    $scope.forms = [];
+    (function initialize() {
+        var httpConfig = {
+            url: '/management/responses/',
+            method: 'GET'
+        };
+        $http(httpConfig).then(function (response) {
+            $scope.forms = response.data.responses;
+        }, function () {
+        })
+    })()
 });
 
 app.controller('FormController', function ($scope) {
@@ -72,13 +85,13 @@ app.directive('weddingForm', function () {
 });
 
 app.directive('messages', function () {
-   return {
-       scope: {
-           'success': '=success'
-       },
-       template: `<div id="success-message" class="alert alert-success alert-dismissible" role="alert" ng-if="success">
+    return {
+        scope: {
+            'success': '=success'
+        },
+        template: `<div id="success-message" class="alert alert-success alert-dismissible" role="alert" ng-if="success">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <strong>Merci d\'avoir repondu.</strong>
         </div>`
-   }
+    }
 });

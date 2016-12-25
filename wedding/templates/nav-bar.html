@@ -4,5 +4,8 @@
     <li><a id='deroulement' href="/deroulement/">Déroulement</a></li>
     <li><a id='hebergement' href="/hebergement/">Hébergement</a></li>
     <li><a id='contact' href="/contact/">Questions & Contact</a></li>
+      {% if request.user.is_staff %}
+    <li><a id='contact' href="/management/">Management</a></li>
+      {% endif %}
   </ul>
 </nav>

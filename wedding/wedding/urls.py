@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from home.views import index, contact, hebergement, deroulement, date_login
+from management.views import response_management, all_responses
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +25,6 @@ urlpatterns = [
     url(r'^hebergement/$', hebergement, name='hebergement'),
     url(r'^deroulement/$', deroulement, name='deroulement'),
     url(r'^login/$', date_login, name='login'),
+    url(r'^management/$', response_management, name='management'),
+    url(r'^management/responses/$', all_responses, name='responses')
 ]

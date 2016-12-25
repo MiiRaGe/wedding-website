@@ -15,9 +15,9 @@ from home.models import JSONFormValues
 @login_required
 def index(request):
     if request.method == 'POST':
-        value_to_store = json.dumps(request.POST)
+        value_to_store = request.body.decode('utf8')
         JSONFormValues.objects.create(responses=value_to_store)
-        return HttpResponse('Succes')
+        return HttpResponse('Success')
     return render(request, 'index.html')
 
 
