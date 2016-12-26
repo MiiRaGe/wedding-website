@@ -247,13 +247,13 @@ div.md-off, div.md-checked, div.md-on {
     color: white;
     text-align: center;
     width: 100%;
-    position: absolute;
-    top: 43%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #textTop {
-    position: absolute;
-    top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     height: 500px;
     width: 100%;
 }
@@ -262,19 +262,24 @@ div.md-off, div.md-checked, div.md-on {
     background: url("../img/new-banner_top.png") no-repeat center center;
     background-size: cover;
     display: block;
-    width: 100%;
+    width: 980px;
     content: '';
-    height: 354px;
-    position: absolute;
-    top: -10px;
+    height: 212px;
+    position: relative;
+    top: 8%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #textTop::after {
-    background: url("../img/new-banner_bottom.png") no-repeat center center;background-size: cover;
-    height: 354px;
-    width: 100%;
+    background: url("../img/new-banner_bottom.png") no-repeat center center;
+    background-size: cover;
+    height: 177px;
+    width: 817px;
     content: '';
     display: block;
-    position: absolute;
-    bottom: -10px;
+    position: relative;
+    bottom: 8%;
+    margin-left: auto;
+    margin-right: auto;
 }
