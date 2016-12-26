@@ -16,12 +16,12 @@
 <body>
 <header>
   <div id="hero">
-    <a href="/" id="text-top">
-        <h1>Mariage de Sophie & Alexis</h1>
-        {% block weddingdate %}<h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
-        <img src="{% static 'img/danseurs.png'%}" alt="" class="banner-top" id="danseurs"></img>
-        <img src="{% static 'img/pic_green.png'%}" alt="" class="banner-top" id="pic_green"></img>
-    </a>
+    <div id="container">
+        <a href="/" id="text-top">
+            <h1>Mariage de Sophie & Alexis</h1>
+            {% block weddingdate %}<h2>{{ settings.WEDDING_DATE|date:'d b Y' }}</h2>{% endblock %}
+        </a>
+    </div>
   </div>
     {% include 'nav-bar.html' %}
 </header>
