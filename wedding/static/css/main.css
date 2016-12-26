@@ -264,3 +264,9 @@ div.md-off, div.md-checked, div.md-on {
     vertical-align:middle;
     font-size: 6em;
 }
+
+#danseurs {
+    width: 131px;
+    margin-top:25px;
+    height: 138px;
+}
