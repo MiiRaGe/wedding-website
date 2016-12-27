@@ -255,7 +255,8 @@ div.md-off, div.md-checked, div.md-on {
 #success-message {
     position: fixed;
     top: 10%;
-    left:10%;
+    left: 10%;
+}
 
 #hero {
     background: url("../img/background_img.jpg") no-repeat center center;
