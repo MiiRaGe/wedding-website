@@ -13,8 +13,10 @@
                              attendance-form="attendanceForm"
                              index="$index" ng-repeat="parent in forms track by $index">
                     </md-card>
-                    <md-card class="add-person-card">
-                        <div ng-click="addForm()"><span class="glyphicon glyphicon-plus-sign"></span>
+                    <md-card class="add-person-card" id="add-wrapper">
+                        <div ng-click="addForm()">
+                            <span class="glyphicon glyphicon-plus-sign" id="add-icon"></span></br>
+                            <p id="add-text">Ajouter une personne</p>
                         </div>
                     </md-card>
                 </div>

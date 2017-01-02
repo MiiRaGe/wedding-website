@@ -59,6 +59,15 @@ HEADER and HEADINGS
     font-size: 1.75em;
 }
 
+#login-content {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#form-date {
+    padding-top: 30px;
+}
+
 h1, h2 {
     color: #151f31;
     text-transform: uppercase;
@@ -146,7 +155,6 @@ nav a {
 FOOTER
 ******************************************/
 
-/* footer*/
 footer {
     font-family: 'Roboto', sans-serif;
     font-size: 0.75em;
@@ -236,9 +244,10 @@ div.md-off, div.md-checked, div.md-on {
 }
 
 .add-person-card div span.glyphicon {
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: middle;
-    font-size: 6em;
+    padding-top: 100px;
+    font-size: 3em;
 }
 
 .asterisk::after {
