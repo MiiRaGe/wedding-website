@@ -1,9 +1,10 @@
+{% load i18n l10n  %}
 <nav>
   <ul id="nav-text">
-    <li><a id='home' href="/">Formulaire de réponse</a></li>
-    <li><a id='deroulement' href="/deroulement/">Déroulement</a></li>
-    <li><a id='hebergement' href="/hebergement/">Hébergement</a></li>
-    <li><a id='contact' href="/contact/">Questions & Contact</a></li>
+    <li><a id='home' href="/">{% trans "Formulaire de réponse" %}</a></li>
+    <li><a id='deroulement' href="/deroulement/">{% trans "Déroulement" %}</a></li>
+    <li><a id='hebergement' href="/hebergement/">{% trans "Hébergement" %}</a></li>
+    <li><a id='contact' href="/contact/">{% trans "Questions & Contact" %}</a></li>
       {% if request.user.is_staff %}
     <li><a id='management' href="/management/">Management</a></li>
       {% endif %}

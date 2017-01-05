@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n l10n %}
 {% block content %}
     <section>
-        <h2 id="bienvenue">Bienvenue</h2>
+        <h2 id="bienvenue">{% trans "Bienvenue" %}</h2>
         <div ng-controller="FormsController">
             <messages success="success"></messages>
-            <h3>N'oubliez pas de répondre à l'invitation!</h3>
+            <h3>{% trans "N'oubliez pas de répondre à l'invitation!" %}</h3>
             <form name="attendanceForm">
                 <div class="card-container" layout-wrap layout="row">
                     <md-card ng-style="{'max-height': parent.form.is_coming_to_wedding ? '600px' : '280px'}"
@@ -16,13 +16,13 @@
                     <md-card class="add-person-card" id="add-wrapper">
                         <div ng-click="addForm()">
                             <span class="glyphicon glyphicon-plus-sign" id="add-icon"></span></br>
-                            <p id="add-text">Ajouter une personne</p>
+                            <p id="add-text">{% trans "Ajouter une personne" %}</p>
                         </div>
                     </md-card>
                 </div>
                 <button type="submit" ng-click="submitForm()" class="btn btn-default">
-                    <span ng-if="!update">Valider</span>
-                    <span ng-if="update">Modifier</span>
+                    <span ng-if="!update">{% trans "Valider" %}</span>
+                    <span ng-if="update">{% trans "Modifier" %}</span>
                 </button>
             </form>
         </div>

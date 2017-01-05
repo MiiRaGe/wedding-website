@@ -1,0 +1,16 @@
+<span class="language-selector">
+    <a class="flag-icon-background flag-icon-gb gb"></a>
+    <a class="flag-icon-background flag-icon-fr fr"></a>
+</span>
+<script type="application/javascript">
+    $('document').ready(function () {
+        $('.fr').click(function () {
+            document.cookie="django_language=fr";
+            window.location.reload();
+        });
+        $('.gb').click(function () {
+            document.cookie="django_language=en";
+            window.location.reload();
+        });
+    })
+</script>

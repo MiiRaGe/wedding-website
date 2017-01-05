@@ -1,0 +1,30 @@
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.flag-icon-background:hover {
+  cursor: pointer;
+}
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+.flag-icon-fr {
+  background-image: url(../flags/4x3/fr.svg);
+}
+.flag-icon-fr.flag-icon-squared {
+  background-image: url(../flags/1x1/fr.svg);
+}
+.flag-icon-gb {
+  background-image: url(../flags/4x3/gb.svg);
+}
+.flag-icon-gb.flag-icon-squared {
+  background-image: url(../flags/1x1/gb.svg);
+}

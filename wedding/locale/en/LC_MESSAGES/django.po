@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-05 23:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: home/views.py:67
+msgid "Date de mariage incorrect, verifier l'invitation"
+msgstr "Wedding Date Incorrect, read the invite, duh."
+
+#: templates/base.html:24
+msgid "Mariage de Sophie & Alexis"
+msgstr "Alexis & Sophie's Wedding"
+
+#: templates/contact.html:5
+msgid "Réponses à vos questions:"
+msgstr "FAQ"
+
+#: templates/contact.html:9
+msgid "Qu'est-ce que vous voulez comme cadeau?"
+msgstr "What wedding present do you want?"
+
+#: templates/contact.html:10
+msgid ""
+"Il n'y a pas de liste de mariage... On aurait du mal à ramener des cadeaux à "
+"Londres!</br>  Si vous voulez contribuer à notre lune de miel, il y aura une "
+"boîte pour laisser une carte à la salle."
+msgstr ""
+"There's no wedding registry, to quote people we love:</br>It's your presence "
+"we care about, not your presents! However if you're feeling generous, there "
+"will be a box where you can slip things."
+
+#: templates/contact.html:19
+msgid "C'est quoi le dress code?"
+msgstr "What's the dress code?"
+
+#: templates/contact.html:20
+msgid ""
+"Tout le monde en superhéros!... </br> Plus sérieusement, il n'y a pas de "
+"dress code particulier."
+msgstr ""
+"Everybody disguised as a superhero!... </br> No seriously, there's no dress "
+"code, 'Come As You Are'"
+
+#: templates/contact.html:27
+msgid "D'autres questions? N'hésitez pas à nous contacter:"
+msgstr "Any other question? Please feel free to contact us:"
+
+#: templates/deroulement.html:5
+msgid "En construction..."
+msgstr "Soon... Check back in a few weeks"
+
+#: templates/hebergement.html:5
+msgid "Quelques hôtels proches du lieu de réception:"
+msgstr "A bunch of hotels near the party:"
+
+#: templates/hebergement.html:9
+msgid "Ibis Budget Sarrebourg"
+msgstr ""
+
+#: templates/hebergement.html:10 templates/hebergement.html:30
+#: templates/hebergement.html:52 templates/hebergement.html:74
+#: templates/hebergement.html:96 templates/hebergement.html:118
+#, python-format
+msgid "À %(time)s min en voiture de la salle."
+msgstr "%(time)s min away by car from the venue."
+
+#: templates/hebergement.html:11 templates/hebergement.html:31
+#: templates/hebergement.html:53 templates/hebergement.html:75
+#: templates/hebergement.html:97 templates/hebergement.html:119
+#, python-format
+msgid "À %(time)s min de la Mairie et l'Église."
+msgstr "%(time)s min away by car from the city hall and church."
+
+#: templates/hebergement.html:20 templates/hebergement.html:64
+#: templates/hebergement.html:108
+msgid "Site de l'Hôtel"
+msgstr "Hotel's website"
+
+#: templates/hebergement.html:29
+msgid "Hotel Notre-Dame de Bonne Fontaine"
+msgstr ""
+
+#: templates/hebergement.html:42
+msgid "L'Hôtel sur Booking.com"
+msgstr "See on booking.com"
+
+#: templates/hebergement.html:51
+msgid "Ibis Styles Sarrebourg"
+msgstr ""
+
+#: templates/hebergement.html:73
+msgid "Hameau des gîtes, Sarrebourg"
+msgstr ""
+
+#: templates/hebergement.html:95
+msgid "Hôtel les Cigognes, Abreshviller"
+msgstr ""
+
+#: templates/hebergement.html:117
+msgid "Center Parcs Les Trois-forêts"
+msgstr ""
+
+#: templates/hebergement.html:130
+msgid "Site de Center Parcs"
+msgstr "Center Parcs website"
+
+#: templates/hebergement.html:140
+msgid ""
+"Location de maisons à des particuliers, dans des villages aux alentours de "
+"Mittelbronn."
+msgstr "Peer-to-peer lending of accomodation near Mittelbronn (party)."
+
+#: templates/index.html:5
+msgid "Bienvenue"
+msgstr "Welcome"
+
+#: templates/index.html:8
+msgid "N'oubliez pas de répondre à l'invitation!"
+msgstr "Don't forget to rsvp using the form below!"
+
+#: templates/index.html:19
+msgid "Ajouter une personne"
+msgstr "Add someone"
+
+#: templates/index.html:24
+msgid "Valider"
+msgstr "Save"
+
+#: templates/index.html:25
+msgid "Modifier"
+msgstr "Update"
+
+#: templates/login.html:10
+msgid "Pour acceder au site, merci de saisir la date du mariage:"
+msgstr "To access to rest of the website please input the wedding date:"
+
+#: templates/login.html:23
+msgid "Se connecter"
+msgstr "Login"
+
+#: templates/nav-bar.html:4
+msgid "Formulaire de réponse"
+msgstr "RSVP"
+
+#: templates/nav-bar.html:5
+msgid "Déroulement"
+msgstr "The big day"
+
+#: templates/nav-bar.html:6
+msgid "Hébergement"
+msgstr "Accomodations"
+
+#: templates/nav-bar.html:7
+msgid "Questions & Contact"
+msgstr "FAQ"

@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n l10n %}
 {% block content %}
     <section>
-        <h2>Réponses à vos questions:</h2><br>
+        <h2>{% trans "Réponses à vos questions:" %}</h2><br>
         <md-card>
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">Qu'est-ce que vous voulez comme cadeau?</span>
-                    <span class="md-subhead">Il n'y a pas de liste de mariage... On aurait du mal à ramener des cadeaux à Londres!</br>  Si vous voulez contribuer à notre lune de miel, il y aura une boîte pour laisser une carte à la salle.</span>
+                    <span class="md-headline">{% trans "Qu'est-ce que vous voulez comme cadeau?" %}</span>
+                    <span class="md-subhead">{% trans "Il n'y a pas de liste de mariage... On aurait du mal à ramener des cadeaux à Londres!</br>  Si vous voulez contribuer à notre lune de miel, il y aura une boîte pour laisser une carte à la salle." %}</span>
                 </md-card-title-text>
             </md-card-title>
             <md-card-actions layout="row" layout-align="end center">
@@ -16,15 +16,15 @@
         <md-card>
             <md-card-title>
                 <md-card-title-text>
-                    <span class="md-headline">C'est quoi le dress code?</span>
-                    <span class="md-subhead">Tout le monde en superhéros!... </br> Plus sérieusement, il n'y a pas de dress code particulier.</span>
+                    <span class="md-headline">{% trans "C'est quoi le dress code?" %}</span>
+                    <span class="md-subhead">{% trans "Tout le monde en superhéros!... </br> Plus sérieusement, il n'y a pas de dress code particulier." %}</span>
                 </md-card-title-text>
             </md-card-title>
             <md-card-actions layout="row" layout-align="end center">
             </md-card-actions>
         </md-card>
         </br>
-        <h2>D'autres questions? N'hésitez pas à nous contacter:</h2><br>
+        <h2>{% trans "D'autres questions? N'hésitez pas à nous contacter:" %}</h2><br>
         <div layout="row">
             <md-card flex="50">
                 <md-card-title>

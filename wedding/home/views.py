@@ -1,6 +1,6 @@
 import json
 
-from django.contrib import messages
+from django.utils.translation import ugettext as _
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
@@ -64,7 +64,7 @@ def date_login(request):
                 login(request, user)
                 return redirect('index')
             else:
-                form.add_error('wedding_date', ValidationError('Date de mariage incorrect, verifier l\'invitation'))
+                form.add_error('wedding_date', ValidationError(_('Date de mariage incorrect, verifier l\'invitation')))
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', context={'form': form})

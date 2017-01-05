@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n l10n %}
 {% block content %}
 <section>
-    <h2>Quelques hôtels proches du lieu de réception:</h2><br>
+    <h2>{% trans "Quelques hôtels proches du lieu de réception:" %}</h2><br>
     <md-card>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Ibis Budget Sarrebourg</span>
-          <span class="md-subhead">À 10 min en voiture de la salle.</span>
-          <span class="md-subhead">À 15 min de la Mairie et l'Église.</span>
+          <span class="md-headline">{% trans "Ibis Budget Sarrebourg" %}</span>
+          <span class="md-subhead">{% blocktrans with time=10 %}À {{ time }} min en voiture de la salle.{% endblocktrans %}</span>
+          <span class="md-subhead">{% blocktrans with time=15 %}À {{ time }} min de la Mairie et l'Église.{% endblocktrans %}</span>
         </md-card-title-text>
         <md-card-title-media>
           <div class="md-media-sm card-media"><img src="{% static 'img/ibis_budget_logo.jpg' %}" alt=""></div>
@@ -17,7 +17,7 @@
       <md-card-actions layout="row" layout-align="end center">
         <md-button>
           <div class="hotel-link">
-            <a href="http://www.ibis.com/fr/hotel-A0Y2-ibis-budget-sarrebourg-buhl-opening-may-2016/index.shtml">Site de l'Hôtel</a>
+            <a href="http://www.ibis.com/fr/hotel-A0Y2-ibis-budget-sarrebourg-buhl-opening-may-2016/index.shtml">{% trans "Site de l'Hôtel" %}</a>
             <span class="glyphicon glyphicon-new-window"></span>
           </div>
         </md-button>
@@ -26,9 +26,9 @@
     <md-card>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Hotel Notre-Dame de Bonne Fontaine</span>
-          <span class="md-subhead">À 10 min en voiture de la salle.</span>
-          <span class="md-subhead">À 30 min de la Mairie et l'Église.</span>
+          <span class="md-headline">{% trans "Hotel Notre-Dame de Bonne Fontaine" %}</span>
+          <span class="md-subhead">{% blocktrans with time=10 %}À {{ time }} min en voiture de la salle.{% endblocktrans %}</span>
+          <span class="md-subhead">{% blocktrans with time=30 %}À {{ time }} min de la Mairie et l'Église.{% endblocktrans %}</span>
         </md-card-title-text>
         <md-card-title-media>
           <div class="md-media-sm card-media">
@@ -39,7 +39,7 @@
       <md-card-actions layout="row" layout-align="end center">
         <md-button>
           <div class="hotel-link">
-            <a href="http://www.booking.com/hotel/fr/ha-tel-notre-dame-57370.fr.html">L'Hôtel sur Booking.com</a>
+            <a href="http://www.booking.com/hotel/fr/ha-tel-notre-dame-57370.fr.html">{% trans "L'Hôtel sur Booking.com" %}</a>
             <span class="glyphicon glyphicon-new-window"></span>
           </div>
         </md-button>
@@ -48,9 +48,9 @@
     <md-card>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Ibis Styles Sarrebourg</span>
-          <span class="md-subhead">À 15 min en voiture de la salle.</span>
-          <span class="md-subhead">À 15 min de la Mairie et l'Église.</span>
+          <span class="md-headline">{% trans "Ibis Styles Sarrebourg" %}</span>
+          <span class="md-subhead">{% blocktrans with time=15 %}À {{ time }} min en voiture de la salle.{% endblocktrans %}</span>
+          <span class="md-subhead">{% blocktrans with time=15 %}À {{ time }} min de la Mairie et l'Église.{% endblocktrans %}</span>
         </md-card-title-text>
         <md-card-title-media>
           <div class="md-media-sm card-media">
@@ -61,7 +61,7 @@
       <md-card-actions layout="row" layout-align="end center">
         <md-button>
           <div class="hotel-link">
-            <a href="http://www.ibis.com/fr/hotel-9439-ibis-styles-sarrebourg/index.shtml">Site de l'Hôtel</a>
+            <a href="http://www.ibis.com/fr/hotel-9439-ibis-styles-sarrebourg/index.shtml">{% trans "Site de l'Hôtel" %}</a>
             <span class="glyphicon glyphicon-new-window"></span>
           </div>
         </md-button>
@@ -70,9 +70,9 @@
     <md-card>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Hameau des gîtes, Sarrebourg</span>
-          <span class="md-subhead">À 15 min en voiture de la salle.</span>
-          <span class="md-subhead">À 20 min de la Mairie et l'Église.</span>
+          <span class="md-headline">{% trans "Hameau des gîtes, Sarrebourg" %}</span>
+          <span class="md-subhead">{% blocktrans with time=15 %}À {{ time }} min en voiture de la salle.{% endblocktrans %}</span>
+          <span class="md-subhead">{% blocktrans with time=20 %}À {{ time }} min de la Mairie et l'Église.{% endblocktrans %}</span>
         </md-card-title-text>
         <md-card-title-media>
           <div class="md-media-sm card-media">
@@ -92,9 +92,9 @@
     <md-card>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Hôtel les Cigognes, Abreshviller</span>
-          <span class="md-subhead">À 20 min en voiture de la salle.</span>
-          <span class="md-subhead">À 10 min de la Mairie et l'Église.</span>
+          <span class="md-headline">{% trans "Hôtel les Cigognes, Abreshviller" %}</span>
+          <span class="md-subhead">{% blocktrans with time=20 %}À {{ time }} min en voiture de la salle.{% endblocktrans %}</span>
+          <span class="md-subhead">{% blocktrans with time=10 %}À {{ time }} min de la Mairie et l'Église.{% endblocktrans %}</span>
         </md-card-title-text>
         <md-card-title-media>
           <div class="md-media-sm card-media">
@@ -105,7 +105,7 @@
       <md-card-actions layout="row" layout-align="end center">
         <md-button>
           <div class="hotel-link">
-            <a href="http://www.les-cigognes.eu/accueil.php">Site de l'Hôtel</a>
+            <a href="http://www.les-cigognes.eu/accueil.php">{% trans "Site de l'Hôtel" %}</a>
             <span class="glyphicon glyphicon-new-window"></span>
           </div>
         </md-button>
@@ -114,9 +114,9 @@
     <md-card>
       <md-card-title>
         <md-card-title-text>
-          <span class="md-headline">Center Parcs Les Trois-forêts</span>
-          <span class="md-subhead">À 30 min en voiture de la salle.</span>
-          <span class="md-subhead">À 10 min de la Mairie et l'Église.</span>
+          <span class="md-headline">{% trans "Center Parcs Les Trois-forêts" %}</span>
+          <span class="md-subhead">{% blocktrans with time=30 %}À {{ time }} min en voiture de la salle.{% endblocktrans %}</span>
+          <span class="md-subhead">{% blocktrans with time=10 %}À {{ time }} min de la Mairie et l'Église.{% endblocktrans %}</span>
         </md-card-title-text>
         <md-card-title-media>
           <div class="md-media-sm card-media">
@@ -127,7 +127,7 @@
       <md-card-actions layout="row" layout-align="end center">
         <md-button>
           <div class="hotel-link">
-            <a href="http://www.centerparcs.fr/fr-fr/france/fp_TF_vacances-domaine-les-trois-forets">Site de Center Parcs</a>
+            <a href="http://www.centerparcs.fr/fr-fr/france/fp_TF_vacances-domaine-les-trois-forets">{% trans "Site de Center Parcs" %}</a>
             <span class="glyphicon glyphicon-new-window"></span>
           </div>
         </md-button>
@@ -137,7 +137,7 @@
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">AirBnB</span>
-            <span class="md-subhead">Location de maisons à des particuliers, dans des villages aux alentours de Mittelbronn.</span>
+            <span class="md-subhead">{% trans "Location de maisons à des particuliers, dans des villages aux alentours de Mittelbronn." %}</span>
           </md-card-title-text>
           <md-card-title-media>
             <div class="md-media-sm card-media"><img src="{% static 'img/airbnb_logo.jpg' %}" alt=""></div>

@@ -316,3 +316,9 @@ div.md-off, div.md-checked, div.md-on {
     margin-left: auto;
     margin-right: auto;
 }
+
+.language-selector {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
