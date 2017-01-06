@@ -16,7 +16,8 @@ angular.module('app', ['ngMaterial', 'pascalprecht.translate', 'ngCookies'])
             'HALAL': 'Halal',
             'ENFANT': 'Child',
             'BABY': 'Baby (no food)',
-            'ALLERGIES': 'Allergies'
+            'ALLERGIES': 'Allergies',
+            'THANKS': 'Answers saved, Thank you.'
         });
         $translateProvider.translations('fr', {
             'DELETE_ACTION': 'Supprimer',
@@ -33,6 +34,7 @@ angular.module('app', ['ngMaterial', 'pascalprecht.translate', 'ngCookies'])
             'ENFANT': 'Enfant',
             'BABY': 'Bébé (pas de repas)',
             'ALLERGIES': 'Allergies',
+            'THANKS': 'Formulaire correctement sauvegardé, Merci.'
         });
         $translateProvider.registerAvailableLanguageKeys(['en', 'fr'], {
             'en_*': 'en',
@@ -109,7 +111,7 @@ app.controller('AdminController', function ($scope, $http) {
 });
 
 app.controller('FormController', function ($scope, $filter) {
-    $scope.food_options = [$filter('translate')(),
+    $scope.food_options = [
         {'value': 'normal', 'label': $filter('translate')('NORMAL')},
         {'value': 'vegetarian', 'label': $filter('translate')('VEGETARIAN')},
         {'value': 'halal', 'label': $filter('translate')('HALAL')},
@@ -144,7 +146,7 @@ app.directive('messages', function () {
         },
         template: `<div id="success-message" class="alert alert-success alert-dismissible" role="alert" ng-if="success">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Formulaire correctement sauvegardé, Merci.</strong>
+          <strong>{{ 'THANKS' | translate }}</strong>
         </div>`
     }
 });

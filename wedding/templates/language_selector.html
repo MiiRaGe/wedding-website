@@ -5,11 +5,11 @@
 <script type="application/javascript">
     $('document').ready(function () {
         $('.fr').click(function () {
-            document.cookie="django_language=fr";
+            Cookies.set('django_language', 'fr');
             window.location.reload();
         });
         $('.gb').click(function () {
-            document.cookie="django_language=en";
+            Cookies.set('django_language', 'en');
             window.location.reload();
         });
     })
