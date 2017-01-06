@@ -1,8 +1,29 @@
-angular.module('app', ['ngMaterial'])
-    .config(function ($httpProvider) {
+angular.module('app', ['ngMaterial', 'pascalprecht.translate', 'ngCookies'])
+    .config(function ($httpProvider, $translateProvider) {
+
         $httpProvider.defaults.headers.common["X-CSRFToken"] = CSRF_TOKEN;
+        $translateProvider.translations('en', {
+            'HELLO': 'Hello',
+            'FOO': 'This is a paragraph'
+        });
+
+        $translateProvider.translations('fr', {
+            'HELLO': 'Hallo',
+            'FOO': 'Dies ist ein Absatz'
+        });
+        $translateProvider.registerAvailableLanguageKeys(['en', 'fr'], {
+            'en_*': 'en',
+            'fr_*': 'fr'
+          });
+        $translateProvider.determinePreferredLanguage();
     })
-    .run();
+    .run(function ($cookies, $translate) {
+        var language_set = $cookies.get('django_language');
+        if (!language_set) {
+            $translate.preferredLanguage(language_set);
+        } else {
+        }
+    });
 
 app = angular.module('app');
 
