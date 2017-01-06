@@ -272,6 +272,7 @@ div.md-off, div.md-checked, div.md-on {
     background-size: cover;
     height: 100%;
     max-height: 400px;
+    min-height: 370px;
     width: 100%;
     margin: 0;
 }
@@ -287,7 +288,8 @@ div.md-off, div.md-checked, div.md-on {
 #textTop {
     margin-top: auto;
     margin-bottom: auto;
-    height: 500px;
+    min-height: 370px;
+    max-height: 400px;
     width: 100%;
 }
 

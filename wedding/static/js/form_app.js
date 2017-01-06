@@ -3,13 +3,36 @@ angular.module('app', ['ngMaterial', 'pascalprecht.translate', 'ngCookies'])
 
         $httpProvider.defaults.headers.common["X-CSRFToken"] = CSRF_TOKEN;
         $translateProvider.translations('en', {
-            'HELLO': 'Hello',
-            'FOO': 'This is a paragraph'
+            'DELETE_ACTION': 'Delete',
+            'FIRST_NAME': 'First Name',
+            'LAST_NAME': 'Last Name',
+            'COMING_QUESTION': 'Is coming to the wedding?',
+            'YES': 'Yes',
+            'NO': 'No',
+            'FOOD': 'Dietetary Restrictions',
+            'COMING_BRUNCH': 'Is coming to the brunch on sunday?',
+            'NORMAL': 'Normal',
+            'VEGETARIAN': 'Veggie',
+            'HALAL': 'Halal',
+            'ENFANT': 'Child',
+            'BABY': 'Baby (no food)',
+            'ALLERGIES': 'Allergies'
         });
-
         $translateProvider.translations('fr', {
-            'HELLO': 'Hallo',
-            'FOO': 'Dies ist ein Absatz'
+            'DELETE_ACTION': 'Supprimer',
+            'FIRST_NAME': 'Prénom',
+            'LAST_NAME': 'Nom',
+            'COMING_QUESTION': 'Vient au mariage?',
+            'YES': 'Oui',
+            'NO': 'Non',
+            'FOOD': 'Préférences pour le repas',
+            'COMING_BRUNCH': 'Vient au brunch le dimanche?',
+            'NORMAL': 'Normal',
+            'VEGETARIAN': 'Végétarien',
+            'HALAL': 'Halal',
+            'ENFANT': 'Enfant',
+            'BABY': 'Bébé (pas de repas)',
+            'ALLERGIES': 'Allergies',
         });
         $translateProvider.registerAvailableLanguageKeys(['en', 'fr'], {
             'en_*': 'en',
@@ -19,9 +42,9 @@ angular.module('app', ['ngMaterial', 'pascalprecht.translate', 'ngCookies'])
     })
     .run(function ($cookies, $translate) {
         var language_set = $cookies.get('django_language');
-        if (!language_set) {
-            $translate.preferredLanguage(language_set);
-        } else {
+        if (language_set) {
+            console.log(language_set);
+            $translate.use(language_set);
         }
     });
 
@@ -32,9 +55,7 @@ app.controller('FormsController', function ($scope, $http, formId) {
     $scope.addForm = function () {
         $scope.forms.push({
             'form': {
-                // 'is_coming_to_wedding': false,
-                'dietetary_restriction': 'normal',
-                // 'is_coming_to_brunch': false,
+                'dietetary_restriction': 'normal'
             },
             'is_valid': false
         })
@@ -87,14 +108,14 @@ app.controller('AdminController', function ($scope, $http) {
     })()
 });
 
-app.controller('FormController', function ($scope) {
-    $scope.food_options = [
-        {'value': 'normal', 'label': 'Normal'},
-        {'value': 'vegetarian', 'label': 'Végétarien'},
-        {'value': 'halal', 'label': 'Halal'},
-        {'value': 'child', 'label': 'Enfant'},
-        {'value': 'baby', 'label': 'Bébé (pas de repas)'},
-        {'value': 'allergies', 'label': 'Allergies'},
+app.controller('FormController', function ($scope, $filter) {
+    $scope.food_options = [$filter('translate')(),
+        {'value': 'normal', 'label': $filter('translate')('NORMAL')},
+        {'value': 'vegetarian', 'label': $filter('translate')('VEGETARIAN')},
+        {'value': 'halal', 'label': $filter('translate')('HALAL')},
+        {'value': 'child', 'label': $filter('translate')('ENFANT')},
+        {'value': 'baby', 'label': $filter('translate')('BABY')},
+        {'value': 'allergies', 'label': $filter('translate')('ALLERGIES')},
     ];
     $scope.resetForm = function () {
         $scope.attendanceForm.$submitted = false;
