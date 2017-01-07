@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-05 23:34+0000\n"
+"POT-Creation-Date: 2017-01-07 00:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Date de mariage incorrect, verifier l'invitation"
 msgstr "Wedding Date Incorrect, read the invite, duh."
 
-#: templates/base.html:24
+#: templates/base.html:39
 msgid "Mariage de Sophie & Alexis"
 msgstr "Alexis & Sophie's Wedding"
 
@@ -72,20 +72,20 @@ msgstr ""
 
 #: templates/hebergement.html:10 templates/hebergement.html:30
 #: templates/hebergement.html:52 templates/hebergement.html:74
-#: templates/hebergement.html:96 templates/hebergement.html:118
+#: templates/hebergement.html:97 templates/hebergement.html:119
 #, python-format
 msgid "À %(time)s min en voiture de la salle."
 msgstr "%(time)s min away by car from the venue."
 
 #: templates/hebergement.html:11 templates/hebergement.html:31
 #: templates/hebergement.html:53 templates/hebergement.html:75
-#: templates/hebergement.html:97 templates/hebergement.html:119
+#: templates/hebergement.html:98 templates/hebergement.html:120
 #, python-format
 msgid "À %(time)s min de la Mairie et l'Église."
 msgstr "%(time)s min away by car from the city hall and church."
 
 #: templates/hebergement.html:20 templates/hebergement.html:64
-#: templates/hebergement.html:108
+#: templates/hebergement.html:109
 msgid "Site de l'Hôtel"
 msgstr "Hotel's website"
 
@@ -105,23 +105,33 @@ msgstr ""
 msgid "Hameau des gîtes, Sarrebourg"
 msgstr ""
 
-#: templates/hebergement.html:95
+#: templates/hebergement.html:87
+#| msgid "Site de l'Hôtel"
+msgid "Site des gîtes"
+msgstr "Hotel's website"
+
+#: templates/hebergement.html:96
 msgid "Hôtel les Cigognes, Abreshviller"
 msgstr ""
 
-#: templates/hebergement.html:117
+#: templates/hebergement.html:118
 msgid "Center Parcs Les Trois-forêts"
 msgstr ""
 
-#: templates/hebergement.html:130
+#: templates/hebergement.html:131
 msgid "Site de Center Parcs"
 msgstr "Center Parcs website"
 
-#: templates/hebergement.html:140
+#: templates/hebergement.html:141
 msgid ""
 "Location de maisons à des particuliers, dans des villages aux alentours de "
 "Mittelbronn."
-msgstr "Peer-to-peer lending of accomodation near Mittelbronn (party)."
+msgstr "Peer-to-peer lending of accomodation near Mittelbronn."
+
+#: templates/hebergement.html:150
+#| msgid "Hébergement"
+msgid "Hébergements sur AirBnb"
+msgstr "AirBnB"
 
 #: templates/index.html:5
 msgid "Bienvenue"
