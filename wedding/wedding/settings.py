@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@y-6ta+1to^iu@50fz-@!bzc$n72la+c2sx_61_73*%u67jm-i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -141,3 +141,15 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LANGUAGES = [('fr', 'Francais'), ('en', 'English')]
+
+EMAIL_BACKEND = 'django_ses.SESBackend'
+
+# These are optional -- if they're set as environment variables they won't
+# need to be set here as well
+AWS_ACCESS_KEY_ID = 'YOUR-ACCESS-KEY-ID'
+AWS_SECRET_ACCESS_KEY = 'YOUR-SECRET-ACCESS-KEY'
+
+# Additionally, if you are not using the default AWS region of us-east-1,
+# you need to specify a region, like so:
+AWS_SES_REGION_NAME = 'eu-west-1'
+AWS_SES_REGION_ENDPOINT = 'email-smtp.eu-west-1.amazonaws.com'
