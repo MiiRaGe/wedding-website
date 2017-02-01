@@ -4,10 +4,13 @@ from django.utils.translation import ugettext as _
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
+from django.conf import settings
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
+from emails.logic import send_nice_email
+from emails.templates import RSVP
 from home.forms import AuthenticationForm
 
 from home.models import JSONFormValues
@@ -20,10 +23,20 @@ def index(request):
         form_id = request.session.get('form_id')
         if form_id:
             JSONFormValues.objects.filter(id=request.session.get('form_id')).update(responses=value_to_store)
+            if settings.ADMIN_EMAILS:
+                try:
+                    send_nice_email(title='Someone just updated their RSVP', json_context=value_to_store, template=RSVP)
+                except Exception:
+                    pass
         else:
             form_value = JSONFormValues.objects.create(responses=value_to_store)
             request.session['form_id'] = form_value.id
             form_id = form_value.id
+            if settings.ADMIN_EMAILS:
+                try:
+                    send_nice_email(title='Someone just RSVP', json_context=value_to_store, template=RSVP)
+                except Exception:
+                    pass
         return HttpResponse(form_id)
     return render(request, 'index.html')
 
