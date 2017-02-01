@@ -1,9 +1,15 @@
 from django.template import Template
 
 RSVP = Template('''
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head></head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>Info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+    </style>
+</head>
 <body>
 <ul>
 {% for person_form in form %}
