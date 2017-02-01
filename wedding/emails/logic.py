@@ -16,6 +16,6 @@ def send_nice_email(title='', json_context=None, context_dict=None, template=Non
     print(context)
     body = template.render(Context(context))
     try:
-        send_mail(title, body, settings.SENDER_EMAIL, settings.ADMIN_EMAILS)
+        send_mail(title, '', settings.SENDER_EMAIL, settings.ADMIN_EMAILS, html_message=body)
     except Exception:
         pass
