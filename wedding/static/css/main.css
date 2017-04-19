@@ -324,3 +324,16 @@ div.md-off, div.md-checked, div.md-on {
     right: 1%;
     top: 1%;
 }
+
+.day-header {
+    background-color: #131e31 !important;
+    text-align: center;
+}
+
+.day-header-text {
+    color: #ceb17c !important;
+    font-weight: lighter !important;
+    font-size: 1.5em !important;
+    font-family: 'Rochester', sans-serif !important;
+    text-transform: none !important;
+}
