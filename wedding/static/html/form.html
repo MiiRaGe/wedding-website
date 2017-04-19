@@ -1,33 +1,30 @@
 <md-card-content layout="column" layout-align="space-between" class="layout-align-space-between-stretch inner-card">
     <md-input-container style="margin-top: 16px;">
         <label>{{ 'FIRST_NAME' | translate }}</label>
-        <input ng-model="form.first_name" ng-required="true">
+        <input ng-model="form.first_name" ng-required="true" disabled>
     </md-input-container>
     <md-input-container style="margin-top: 5px; margin-bottom: 5px; padding-left: 0px; padding-right: 0px;">
         <label>{{ 'LAST_NAME' | translate }}</label>
-        <input ng-model="form.last_name" ng-required="true">
+        <input ng-model="form.last_name" ng-required="true" disabled>
     </md-input-container>
     <md-input-container flex-fill layout="column" class="no-margin-bottom comming-to-wedding">
         <div flex class="asterisk forms-labels" ng-class="{'error': attendanceForm.$submitted && form.is_coming_to_wedding == undefined}">{{ 'COMING_QUESTION' | translate }}</div>
         <md-radio-group ng-model="form.is_coming_to_wedding" layout="row" ng-required="true" ng-change="resetForm()">
-            <md-radio-button ng-value="true">{{ 'YES' | translate }}</md-radio-button>
-            <md-radio-button ng-value="false">{{ 'NO' | translate }}</md-radio-button>
+            <md-radio-button ng-value="true" disabled>{{ 'YES' | translate }}</md-radio-button>
+            <md-radio-button ng-value="false" disabled>{{ 'NO' | translate }}</md-radio-button>
         </md-radio-group>
     </md-input-container>
     <md-input-container class="dietetary_restriction no-margin-bottom" ng-if="form.is_coming_to_wedding" flex>
         <div class="asterisk forms-labels">{{ 'FOOD' | translate }}</div>
-        <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood" flex ng-required="true">
+        <md-select ng-model="form.dietetary_restriction" data-md-container-class="selectFood" flex ng-required="true" disabled>
             <md-option ng-repeat="obj in food_options" ng-value="obj.value">{{ obj.label }}</md-option>
         </md-select>
     </md-input-container>
     <md-input-container ng-if="form.is_coming_to_wedding" flex-fill layout="column" class="no-margin-bottom">
         <div class="asterisk forms-labels" ng-class="{'error': attendanceForm.$submitted && form.is_coming_to_brunch == undefined}">{{ 'COMING_BRUNCH' | translate }}</div>
         <md-radio-group ng-model="form.is_coming_to_brunch" layout="row" ng-required="true">
-            <md-radio-button ng-value="true">{{ 'YES' | translate }}</md-radio-button>
-            <md-radio-button ng-value="false">{{ 'NO' | translate }}</md-radio-button>
+            <md-radio-button ng-value="true" disabled>{{ 'YES' | translate }}</md-radio-button>
+            <md-radio-button ng-value="false" disabled>{{ 'NO' | translate }}</md-radio-button>
         </md-radio-group>
     </md-input-container>
 </md-card-content>
-<md-card-actions layout="row" layout-align="end center">
-    <md-button ng-click="removeForm(index)" class="supprimer">{{ 'DELETE_ACTION' | translate }}</md-button>
-</md-card-actions>
