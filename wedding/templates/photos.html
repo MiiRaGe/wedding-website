@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static i18n l10n %}
+{% block content %}
+    <section>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{% trans "Pour voir les photos du mariage (photobooth et photos prises par les invités:" %}</span>
+                    <a href="https://drive.google.com/drive/folders/0B7TLOuJpl_cDODktWWNVQ0R6MFk?usp=sharing">{% trans "Cliquez ici" %}</a>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+            </md-card-actions>
+        </md-card>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{% trans "Photos de la photographe" %}</span>
+                    <a href="">{% trans "Disponibles dans 2 à 4 semaines" %}</a>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+            </md-card-actions>
+        </md-card>
+    <h2>{% trans "Vous avez pris des photos lors du mariage? Nous adorerions les voir, envoyez-les nou svp :) " %}</h2><br>
+        <div layout="row">
+            <md-card flex="50">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Alexis</span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-envelope"></span> <a
+                                href="mailto:alexis.durand28@gmail.com">alexis.durand28@gmail.com</a></span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-earphone"></span> +44 (0)7 59 806 61 51</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                </md-card-actions>
+            </md-card>
+            <md-card flex="50">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Sophie</span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-envelope"></span> <a
+                                href="mailto:sophie.buda123@gmail.com">sophie.buda123@gmail.com</a></span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-earphone"></span> +44 (0)7 52 218 28 57</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                </md-card-actions>
+            </md-card>
+        </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+    <script type="application/javascript">
+        $('document').ready(function () {
+            $('#contact').toggleClass('selected');
+        })
+    </script>
+{% endblock %}
