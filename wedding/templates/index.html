@@ -1,111 +1,54 @@
 {% extends 'base.html' %}
 {% load static i18n l10n %}
 {% block content %}
-     <!––<section>
-        <div ng-cloak>
-            <md-toolbar class="day-header">
-                <h2 class="md-toolbar-tools day-header-text">
-                    <span>{% trans "Samedi 27 Mai" %}</span>
-                </h2>
-            </md-toolbar>
-
-            <md-content>
-                <md-list>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "14h30 : Rendez Vous" %}</h4>
-                            <h3>{% trans "Devant la mairie de Lorquin : 41 Rue du Général Leclerc, 57790" %}</h3>
-                            <p>{% trans "Rendez-vous devant la mairie de Lorquin (Seulement quelques places de parking disponibles. Plus de places près de l'Église (au niveau de la Rue du Dr Marchal) et sur la Rue des Vosges.)" %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "14h45 : Mariage Civil" %}</h4>
-                            <h3>{% trans "Mairie de Lorquin" %}</h3>
-                            <p>{% trans "Ceremonie de mariage civil (30min environ)" %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "15h40 : Bénédiction Religieuse" %}</h4>
-                            <h3>{% trans "Église de Lorquin (à quelques pas de la mairie)" %}</h3>
-                            <p>{% trans "(45min environ)" %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "16h15 : Sortie d'église" %}</h4>
-                            <h3>{% trans "Eglise de Lorquin" %}</h3>
-                            <p>{% trans "Sortie de l'église sous les bulles, petite pause pour discuter et prendre quelque photos." %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "17h : Départ vers vin d'honneur" %}</h4>
-                            <h3>{% trans "Lorquin -> Mittelbronn" %}</h3>
-                            <p>{% trans "Formation du cortège, puis départ vers le lieu de réception." %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "18h : Vin d'honneur/Cocktail Apéritif" %}</h4>
-                            <h3>{% trans "Mittelbronn" %}</h3>
-                            <p>{% trans "Debut des festivités avec un aperitif/cocktail à la salle de Mittelbronn." %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "20h : Entrée en salle et repas" %}</h4>
-                            <h3>{% trans "Mittelbronn" %}</h3>
-                            <p>{% trans "Entrée dans la salle et repas." %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "~00h : Ouverture du bal" %}</h4>
-                            <h3>{% trans "Mittelbronn" %}</h3>
-                            <p>{% trans "Premiere danse et début de soirée." %}</p>
-                        </div>
-                    </md-list-item>
-                </md-list>
-
-            </md-content>
-            <md-toolbar class="day-header">
-                <h2 class="md-toolbar-tools day-header-text">
-                    <span>{% trans "Dimanche 28 Mai" %}</span>
-                </h2>
-            </md-toolbar>
-
-            <md-content>
-                <md-list>
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <h4>{% trans "11h00 : Brunch" %}</h4>
-                            <h3>{% trans "Mittelbronn" %}</h3>
-                            <p>{% trans "Buffet Froid, Viennoiseries, Café, Thé" %}</p>
-                        </div>
-                        <md-divider></md-divider>
-                    </md-list-item>
-                </md-list>
-            </md-content>
+    <section>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{% trans "Pour voir les photos du mariage (photobooth et photos prises par les invités:" %}</span>
+                    <a href="https://drive.google.com/drive/folders/0B7TLOuJpl_cDODktWWNVQ0R6MFk?usp=sharing">{% trans "Cliquez ici" %}</a>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+            </md-card-actions>
+        </md-card>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{% trans "Photos de la photographe" %}</span>
+                    <a href="">{% trans "Disponibles dans 2 à 4 semaines" %}</a>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+            </md-card-actions>
+        </md-card>
+    <h2>{% trans "Vous avez pris des photos lors du mariage? Nous adorerions les voir, envoyez-les nou svp :) " %}</h2><br>
+        <div layout="row">
+            <md-card flex="50">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Alexis</span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-envelope"></span> <a
+                                href="mailto:alexis.durand28@gmail.com">alexis.durand28@gmail.com</a></span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-earphone"></span> +44 (0)7 59 806 61 51</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                </md-card-actions>
+            </md-card>
+            <md-card flex="50">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Sophie</span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-envelope"></span> <a
+                                href="mailto:sophie.buda123@gmail.com">sophie.buda123@gmail.com</a></span>
+                        <span class="md-subhead"><span style="color: #999;" class="glyphicon glyphicon-earphone"></span> +44 (0)7 52 218 28 57</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                </md-card-actions>
+            </md-card>
         </div>
-        <div ng-controller="FormsController" ng-if="forms">
-            <form name="attendanceForm">
-                <div class="card-container" layout-wrap layout="row">
-                    <md-card ng-style="{'max-height': parent.form.is_coming_to_wedding ? '600px' : '280px'}"
-                             class="invitation-card" wedding-form form="parent.form" remove-form="removeForm"
-                             attendance-form="attendanceForm"
-                             index="$index" ng-repeat="parent in forms track by $index">
-                    </md-card>
-                </div>
-            </form>
         </div>
     </section>
 {% endblock %}
@@ -113,10 +56,7 @@
 {% block js %}
     <script type="application/javascript">
         $('document').ready(function () {
-            $('#home').toggleClass('selected');
+            $('#contact').toggleClass('selected');
         })
-    </script>
-    <script type="application/javascript">
-        angular.module('app').value('formId', '{{ request.session.form_id }}');
     </script>
 {% endblock %}
