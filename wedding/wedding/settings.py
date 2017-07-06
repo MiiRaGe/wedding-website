@@ -145,3 +145,4 @@ LANGUAGES = [('fr', 'Francais'), ('en', 'English')]
 ADMIN_EMAILS = ['admin@alexisandsophie.com']
 SENDER_EMAIL = 'batgirl@alexisandsophie.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+PHOTO_URL = ''

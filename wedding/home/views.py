@@ -38,7 +38,7 @@ def index(request):
                 except Exception:
                     pass
         return HttpResponse(form_id)
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'photo_url': settings.PHOTO_URL})
 
 
 @login_required
